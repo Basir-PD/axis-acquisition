@@ -435,6 +435,102 @@ html {
   color: white;
 }
 
+/* Minimal Phone Input - Contact Page */
+.phone-input-minimal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  transition: border-color 0.2s;
+}
+
+.phone-input-minimal:focus-within {
+  border-color: rgb(23, 23, 23);
+}
+
+.dark .phone-input-minimal {
+  border-color: rgb(38, 38, 38);
+}
+
+.dark .phone-input-minimal:focus-within {
+  border-color: rgb(245, 245, 245);
+}
+
+.phone-input-minimal .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 0.75rem;
+}
+
+.phone-input-minimal .PhoneInputCountrySelect {
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.phone-input-minimal .PhoneInputCountrySelect:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .phone-input-minimal .PhoneInputCountrySelect:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.phone-input-minimal .PhoneInputCountrySelect:focus {
+  outline: none;
+}
+
+.phone-input-minimal .PhoneInputCountryIcon {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.phone-input-minimal .PhoneInputCountrySelectArrow {
+  width: 6px;
+  height: 6px;
+  opacity: 0.4;
+  margin-left: 4px;
+}
+
+.phone-input-minimal .PhoneInputInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: rgb(23, 23, 23);
+  padding: 1rem 0;
+}
+
+.dark .phone-input-minimal .PhoneInputInput {
+  color: rgb(245, 245, 245);
+}
+
+.phone-input-minimal .PhoneInputInput::placeholder {
+  color: rgb(156, 163, 175);
+}
+
+.dark .phone-input-minimal .PhoneInputInput::placeholder {
+  color: rgb(82, 82, 91);
+}
+
+.phone-input-minimal .PhoneInputCountrySelect option {
+  padding: 0.5rem;
+  background: white;
+  color: black;
+}
+
+.dark .phone-input-minimal .PhoneInputCountrySelect option {
+  background: rgb(23, 23, 23);
+  color: white;
+}
+
 /* Organic decorative elements */
 .leaf-pattern {
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-8 8-15 20-15 30 0 8 7 15 15 15s15-7 15-15c0-10-7-22-15-30z' fill='%235d7f5908' stroke='%235d7f5910' stroke-width='1'/%3E%3C/svg%3E");

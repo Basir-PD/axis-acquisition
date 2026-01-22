@@ -1,105 +1,148 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
-import { ArrowUpRight, Mail, Phone } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import { useRef } from 'react'
-import ContactFormWrapper from '@/components/contact/ContactFormWrapper'
-import { FAQs } from '@/components/faq/faqs'
-
-const contactMethods = [
-  {
-    icon: Phone,
-    value: '+1 514 775 6790',
-    href: 'tel:+15147756790',
-  },
-  {
-    icon: Mail,
-    value: 'info@axisacquisition.com',
-    href: 'mailto:info@axisacquisition.com',
-  },
-]
+import { ContactForm } from './contact'
 
 export default function ContactPageContent() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const isHeroInView = useInView(heroRef, { once: true, margin: '-50px' })
-
   return (
-    <div className="min-h-screen bg-cream-50 dark:bg-[#0a0d0a]">
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-32 pb-12 md:pt-40 md:pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold text-sage-900 dark:text-cream-50 leading-[1.1] tracking-tight mb-6"
-          >
-            Let&apos;s build{' '}
-            <span className="relative inline-block">
-              <span className="relative z-10">something</span>
-              <motion.span
-                initial={{ scaleX: 0 }}
-                animate={isHeroInView ? { scaleX: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="absolute bottom-1 left-0 right-0 h-3 bg-sage-200 dark:bg-sage-800 -z-0 origin-left"
-              />
-            </span>{' '}
-            <span className="text-sage-500 dark:text-sage-400">
-              remarkable.
-            </span>
-          </motion.h1>
+    <div className="min-h-screen bg-[#faf9f7] dark:bg-[#0a0a0a]">
+      {/* Minimal grid lines for subtle texture */}
+      <div className="fixed inset-0 pointer-events-none opacity-[0.015] dark:opacity-[0.03]">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage:
+              'linear-gradient(90deg, #000 1px, transparent 1px)',
+            backgroundSize: '120px 120px',
+          }}
+        />
+      </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl mx-auto mb-8"
-          >
-            Tell us about your project and we&apos;ll get back to you within 24
-            hours.
-          </motion.p>
-
-          {/* Contact methods */}
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Header Section */}
+        <header className="pt-32 md:pt-40 pb-16 md:pb-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-2xl"
           >
-            {contactMethods.map((method) => (
-              <Link
-                key={method.value}
-                href={method.href}
-                className="group inline-flex items-center gap-3 px-5 py-3 bg-white dark:bg-sage-950/50 rounded-full border border-sage-100 dark:border-sage-800/50 hover:border-sage-300 dark:hover:border-sage-700 transition-all"
-              >
-                <method.icon className="w-4 h-4 text-sage-500" />
-                <span className="text-sage-900 dark:text-cream-50 font-medium">
-                  {method.value}
+            {/* Eyebrow */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-xs tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 mb-6"
+            >
+              Get in touch
+            </motion.p>
+
+            {/* Main Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-stone-900 dark:text-stone-100 leading-[1.1] tracking-[-0.02em] mb-8"
+            >
+              Let's start a
+              <br />
+              conversation.
+            </motion.h1>
+
+            {/* Subtle divider */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="w-16 h-px bg-stone-300 dark:bg-stone-700 origin-left mb-8"
+            />
+
+            {/* Subtext */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-base text-stone-500 dark:text-stone-400 leading-relaxed max-w-md"
+            >
+              Share your vision with us. We respond within 24 hours.
+            </motion.p>
+          </motion.div>
+        </header>
+
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-5 gap-16 lg:gap-24 pb-24 md:pb-32">
+          {/* Contact Info - Left Column */}
+          <motion.aside
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="lg:col-span-2 space-y-12"
+          >
+            {/* Direct Contact */}
+            <div>
+              <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-6">
+                Direct
+              </h2>
+              <div className="space-y-4">
+                <Link
+                  href="mailto:info@axisacquisition.com"
+                  className="group flex items-center gap-3 text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+                >
+                  <span className="text-base">info@axisacquisition.com</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </Link>
+                <Link
+                  href="tel:+15147756790"
+                  className="group flex items-center gap-3 text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+                >
+                  <span className="text-base">+1 514 775 6790</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div>
+              <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-6">
+                Based in
+              </h2>
+              <p className="text-stone-700 dark:text-stone-300 text-base leading-relaxed">
+                Montreal, Canada
+                <br />
+                <span className="text-stone-400 dark:text-stone-500">
+                  Working globally
                 </span>
-                <ArrowUpRight className="w-4 h-4 text-sage-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+              </p>
+            </div>
 
-      {/* Form Section */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Hours */}
+            <div>
+              <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-6">
+                Hours
+              </h2>
+              <p className="text-stone-700 dark:text-stone-300 text-base leading-relaxed">
+                Monday — Friday
+                <br />
+                <span className="text-stone-400 dark:text-stone-500">
+                  9:00 AM — 6:00 PM EST
+                </span>
+              </p>
+            </div>
+          </motion.aside>
+
+          {/* Contact Form - Right Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="lg:col-span-3"
           >
-            <ContactFormWrapper />
+            <ContactForm />
           </motion.div>
         </div>
-      </section>
-
-      {/* FAQ Section */}
-      <FAQs hideCTA />
+      </div>
     </div>
   )
 }
