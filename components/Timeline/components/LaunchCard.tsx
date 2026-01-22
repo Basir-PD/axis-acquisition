@@ -1,7 +1,7 @@
 'use client'
 
-import Lottie from 'react-lottie'
 import { FormattedMessage } from 'react-intl'
+import Lottie from 'react-lottie'
 import checkmarkAnimation from '@/public/images/projectWalkthrough/checkmark.json'
 import { IpadCard } from './IpadCard'
 

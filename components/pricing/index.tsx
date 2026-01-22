@@ -1,21 +1,21 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
 import {
   ArrowRight,
-  Globe,
-  Megaphone,
   BarChart3,
   Calendar,
-  MessageSquare,
-  Zap,
   CheckCircle2,
+  Globe,
+  Megaphone,
+  MessageSquare,
+  Target,
   TrendingUp,
   Users,
-  Target,
+  Zap,
 } from 'lucide-react'
+import Link from 'next/link'
+import { useRef } from 'react'
 
 const includedServices = [
   {
@@ -57,7 +57,8 @@ const results = [
 ]
 
 const testimonial = {
-  quote: "We went from struggling to fill appointments to having a 3-week waitlist. Axis didn't just run ads — they built us a complete patient acquisition system.",
+  quote:
+    "We went from struggling to fill appointments to having a 3-week waitlist. Axis didn't just run ads — they built us a complete patient acquisition system.",
   author: 'Dr. Sarah Chen',
   role: 'Integrative Wellness Center',
   result: '312% increase in new patients',
@@ -86,8 +87,10 @@ export default function Pricing() {
         }}
       />
 
-      <div ref={containerRef} className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
+      <div
+        ref={containerRef}
+        className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         {/* Header */}
         <motion.div
           className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
@@ -103,8 +106,8 @@ export default function Pricing() {
             <span className="text-sage-400">fill your clinic</span>
           </h2>
           <p className="text-lg md:text-xl text-sage-300 leading-relaxed">
-            A complete patient acquisition system tailored to your clinic.
-            No cookie-cutter packages — just results.
+            A complete patient acquisition system tailored to your clinic. No
+            cookie-cutter packages — just results.
           </p>
         </motion.div>
 
@@ -152,8 +155,12 @@ export default function Pricing() {
                     <service.icon className="w-5 h-5 text-sage-300" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">{service.title}</h4>
-                    <p className="text-sm text-sage-400 leading-relaxed">{service.description}</p>
+                    <h4 className="font-semibold text-white mb-1">
+                      {service.title}
+                    </h4>
+                    <p className="text-sm text-sage-400 leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -169,7 +176,9 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <div className="relative max-w-3xl mx-auto">
-            <div className="absolute -top-4 -left-4 text-6xl text-sage-700/50 font-serif">&ldquo;</div>
+            <div className="absolute -top-4 -left-4 text-6xl text-sage-700/50 font-serif">
+              &ldquo;
+            </div>
             <div className="relative bg-sage-800/20 border border-sage-700/30 rounded-3xl p-8 md:p-10">
               <p className="text-lg md:text-xl text-sage-200 leading-relaxed mb-6 italic">
                 {testimonial.quote}
@@ -178,13 +187,19 @@ export default function Pricing() {
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-sage-700/50" />
                   <div>
-                    <div className="font-semibold text-white">{testimonial.author}</div>
-                    <div className="text-sm text-sage-400">{testimonial.role}</div>
+                    <div className="font-semibold text-white">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-sm text-sage-400">
+                      {testimonial.role}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-sage-700/30 border border-sage-600/30">
                   <TrendingUp className="w-4 h-4 text-green-400" />
-                  <span className="text-sm font-medium text-green-400">{testimonial.result}</span>
+                  <span className="text-sm font-medium text-green-400">
+                    {testimonial.result}
+                  </span>
                 </div>
               </div>
             </div>
@@ -203,8 +218,9 @@ export default function Pricing() {
               Ready to fill your clinic with patients?
             </h3>
             <p className="text-sage-300">
-              Book a free strategy call. We&apos;ll analyze your clinic, your competition,
-              and show you exactly how we&apos;d grow your practice.
+              Book a free strategy call. We&apos;ll analyze your clinic, your
+              competition, and show you exactly how we&apos;d grow your
+              practice.
             </p>
           </div>
 

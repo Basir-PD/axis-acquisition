@@ -1,12 +1,13 @@
 'use client'
-import { cn } from '@/lib/utils'
 import {
   motion,
   useMotionValueEvent,
   useScroll,
   useTransform,
 } from 'framer-motion'
-import React, { CSSProperties, useRef, useState } from 'react'
+import type React from 'react'
+import { type CSSProperties, useRef, useState } from 'react'
+import { cn } from '@/lib/utils'
 
 export const GradientContainer = ({
   children,

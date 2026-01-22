@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
-import { useFaqData } from './constants/faqData'
+import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { ChevronDown, HelpCircle, MessageCircle, Phone } from 'lucide-react'
 import Link from 'next/link'
+import { useRef, useState } from 'react'
+import { useFaqData } from './constants/faqData'
 
 interface FAQsProps {
   hideCTA?: boolean
@@ -53,7 +53,8 @@ export function FAQs({ hideCTA }: FAQsProps) {
             <span className="text-sage-600 dark:text-sage-400">Answered</span>
           </h2>
           <p className="mt-4 text-lg text-stone-600 dark:text-stone-300">
-            Everything you need to know about our integrative approach to healthcare
+            Everything you need to know about our integrative approach to
+            healthcare
           </p>
         </motion.div>
 
@@ -133,7 +134,8 @@ export function FAQs({ hideCTA }: FAQsProps) {
                 Still Have Questions?
               </h3>
               <p className="text-sage-100 text-lg mb-6 max-w-lg mx-auto">
-                Our team is here to help. Schedule a free discovery call or reach out directly.
+                Our team is here to help. Schedule a free discovery call or
+                reach out directly.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link

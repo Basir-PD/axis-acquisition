@@ -1,7 +1,7 @@
 'use client'
 
-import { Turnstile, TurnstileInstance } from '@marsidev/react-turnstile'
-import { useRef, forwardRef, useImperativeHandle } from 'react'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
+import { forwardRef, useImperativeHandle, useRef } from 'react'
 
 interface TurnstileWrapperProps {
   onVerify: (_token: string) => void

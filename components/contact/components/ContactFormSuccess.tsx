@@ -1,7 +1,7 @@
-import React from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle2, Phone, ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Phone } from 'lucide-react'
 import Link from 'next/link'
+import type React from 'react'
 
 interface ContactFormSuccessProps {
   onReset: () => void
@@ -34,8 +34,8 @@ export const ContactFormSuccess: React.FC<ContactFormSuccessProps> = ({
 
       {/* Message */}
       <p className="text-lg text-stone-600 dark:text-stone-300 mb-6 max-w-lg mx-auto">
-        Thank you for reaching out. Our team will contact you within
-        24 hours to schedule your free growth strategy call.
+        Thank you for reaching out. Our team will contact you within 24 hours to
+        schedule your free growth strategy call.
       </p>
 
       {/* What&apos;s Next Box */}

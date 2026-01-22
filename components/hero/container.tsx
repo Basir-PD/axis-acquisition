@@ -1,5 +1,5 @@
+import type React from 'react'
 import { cn } from '@/lib/utils'
-import React from 'react'
 
 export const Container = ({
   children,
@@ -9,7 +9,7 @@ export const Container = ({
   className?: string
 }) => {
   return (
-    <div className={cn(`max-w-[85rem] mx-auto px-4 `, className)}>
+    <div className={cn('max-w-[85rem] mx-auto px-4 ', className)}>
       {children}
     </div>
   )

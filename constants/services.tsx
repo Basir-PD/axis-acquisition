@@ -1,6 +1,6 @@
 import { AiOutlineCode, AiOutlineSearch } from 'react-icons/ai'
-import { BsUiChecks } from 'react-icons/bs'
 import { BiRocket } from 'react-icons/bi'
+import { BsUiChecks } from 'react-icons/bs'
 import { FaMobile } from 'react-icons/fa'
 import { MdShoppingCart } from 'react-icons/md'
 
@@ -8,7 +8,8 @@ export const services = [
   {
     id: 0,
     title: 'Website Development',
-    description: `Enterprise-grade websites built with cutting-edge technologies. Scalable, secure, and optimized for maximum performance and user engagement.`,
+    description:
+      'Enterprise-grade websites built with cutting-edge technologies. Scalable, secure, and optimized for maximum performance and user engagement.',
     icon: (
       <AiOutlineCode className="h-8 w-8 text-gray-500 dark:text-gray-300" />
     ),
@@ -23,7 +24,8 @@ export const services = [
   {
     id: 1,
     title: 'UI/UX Design',
-    description: `Data-driven design solutions that convert visitors into customers. Strategic user experience optimization backed by industry best practices.`,
+    description:
+      'Data-driven design solutions that convert visitors into customers. Strategic user experience optimization backed by industry best practices.',
     icon: <BsUiChecks className="h-8 w-8 text-gray-500 dark:text-gray-300" />,
     pattern: {
       y: -6,
@@ -36,7 +38,8 @@ export const services = [
   {
     id: 2,
     title: 'Ecommerce Solutions',
-    description: `Complete online store development with integrated payment systems, inventory management, and conversion optimization for maximum revenue generation.`,
+    description:
+      'Complete online store development with integrated payment systems, inventory management, and conversion optimization for maximum revenue generation.',
     icon: (
       <MdShoppingCart className="h-8 w-8 text-gray-500 dark:text-gray-300" />
     ),
@@ -51,7 +54,8 @@ export const services = [
   {
     id: 3,
     title: 'Mobile App Development',
-    description: `Native and cross-platform mobile applications designed for optimal performance across iOS and Android devices with seamless user experiences.`,
+    description:
+      'Native and cross-platform mobile applications designed for optimal performance across iOS and Android devices with seamless user experiences.',
     icon: <FaMobile className="h-8 w-8 text-gray-500 dark:text-gray-300" />,
     pattern: {
       y: 22,
@@ -61,7 +65,8 @@ export const services = [
   {
     id: 4,
     title: 'SEO Services',
-    description: `Strategic search engine optimization that drives organic traffic and improves search rankings through technical optimization and content strategy.`,
+    description:
+      'Strategic search engine optimization that drives organic traffic and improves search rankings through technical optimization and content strategy.',
     icon: (
       <AiOutlineSearch className="h-8 w-8 text-gray-500 dark:text-gray-300" />
     ),
@@ -91,7 +96,8 @@ export const services = [
   {
     id: 6,
     title: 'Cloud Deployment & Hosting',
-    description: `Reliable cloud infrastructure solutions with automated deployments, 99.9% uptime guarantee, and scalable hosting architecture.`,
+    description:
+      'Reliable cloud infrastructure solutions with automated deployments, 99.9% uptime guarantee, and scalable hosting architecture.',
     icon: (
       <BiRocket className="h-8 w-8 text-gray-500 dark:text-gray-300 stroke-gray-500 dark:stroke-gray-300" />
     ),

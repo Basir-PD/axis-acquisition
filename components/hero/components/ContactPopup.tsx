@@ -1,15 +1,11 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { X, CheckCircle, MessageSquare, Send, Loader2 } from 'lucide-react'
-import { useIntl, FormattedMessage } from 'react-intl'
-import { useFormSubmission } from '@/hooks/use-form-submission'
-// import {
-//   TurnstileWrapper,
-//   TurnstileWrapperRef,
-// } from '@/components/ui/turnstile'
+import { AnimatePresence, motion } from 'framer-motion'
+import { CheckCircle, Loader2, MessageSquare, Send, X } from 'lucide-react'
+import { useRef, useState } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { HoneypotField } from '@/components/ui/honeypot'
+import { useConvexContactForm } from '@/hooks/use-convex-contact-form'
 
 interface ContactPopupProps {
   show: boolean
@@ -22,20 +18,12 @@ export function ContactPopup({ show, onClose }: ContactPopupProps) {
     name: '',
     email: '',
     message: '',
-    company: intl.formatMessage({
-      id: 'contact.form.quickContact',
-      defaultMessage: 'Quick Contact',
-    }),
   })
-  // const [turnstileToken, setTurnstileToken] = useState<string>('')
-  const [turnstileToken] = useState<string>('dummy-token') // Temporarily bypassing Turnstile
   const [honeypot, setHoneypot] = useState<string>('')
-  const [showCaptchaHint, setShowCaptchaHint] = useState(false)
-  // const turnstileRef = useRef<TurnstileWrapperRef>(null)
   const formRef = useRef<HTMLFormElement>(null)
 
-  const { submitForm, isSubmitting, isSuccess, error } = useFormSubmission({
-    formType: 'quick-contact',
+  const { submitForm, isSubmitting, isSuccess, error } = useConvexContactForm({
+    source: 'quick-contact',
     onSuccess: () => {
       setTimeout(() => {
         onClose()
@@ -49,47 +37,19 @@ export function ContactPopup({ show, onClose }: ContactPopupProps) {
       name: '',
       email: '',
       message: '',
-      company: intl.formatMessage({
-        id: 'contact.form.quickContact',
-        defaultMessage: 'Quick Contact',
-      }),
     })
-    // setTurnstileToken('')
     setHoneypot('')
-    // turnstileRef.current?.reset()
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Check spam protection - commented out for now
-    // if (!turnstileToken) {
-    //   setShowCaptchaHint(true)
-    //   // Scroll to captcha if needed
-    //   const captchaElement = formRef.current?.querySelector(
-    //     '.turnstile-container',
-    //   )
-    //   captchaElement?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    //   return
-    // }
-
     if (honeypot) {
-      // Honeypot was filled - likely spam
       return
     }
 
-    await submitForm({
-      ...formData,
-      turnstileToken,
-    })
+    await submitForm(formData)
   }
-
-  // Auto-hide captcha hint after token is received
-  useEffect(() => {
-    if (turnstileToken && showCaptchaHint) {
-      setShowCaptchaHint(false)
-    }
-  }, [turnstileToken, showCaptchaHint])
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

@@ -1,20 +1,19 @@
 'use client'
-import Image from 'next/image'
-
-import React, { useEffect, useState } from 'react'
 
 import {
-  motion,
-  useTransform,
   AnimatePresence,
+  animate,
+  motion,
+  stagger,
   useMotionValue,
   useSpring,
-  animate,
-  stagger,
+  useTransform,
 } from 'framer-motion'
-import { testimonials } from '@/constants/testimonials'
-import { twMerge } from 'tailwind-merge'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { BsStarFill } from 'react-icons/bs'
+import { twMerge } from 'tailwind-merge'
+import { testimonials } from '@/constants/testimonials'
 import { cn } from '@/lib/utils'
 
 export const FeaturedImages = ({

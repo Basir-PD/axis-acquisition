@@ -1,20 +1,39 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import { z } from 'zod'
-import { isValidPhoneNumber } from 'react-phone-number-input'
-import { Form } from '@/components/ui/form'
+import 'react-phone-number-input/style.css'
 import { motion } from 'framer-motion'
-import { useFormSubmission } from '@/hooks/use-form-submission'
+import {
+  ArrowRight,
+  Briefcase,
+  Mail,
+  MessageSquare,
+  Phone,
+  User,
+} from 'lucide-react'
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from '@/components/ui/form'
 import { HoneypotField } from '@/components/ui/honeypot'
-import { NameEmailFields } from './components/NameEmailFields'
-import { PhonePackageFields } from './components/PhonePackageFields'
-import { MessageField } from './components/MessageField'
-import { SubmitButton } from './components/SubmitButton'
+import { SafeInput as Input } from '@/components/ui/safe-input'
+import { SafeTextarea as Textarea } from '@/components/ui/safe-textarea'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { useConvexContactForm } from '@/hooks/use-convex-contact-form'
 import { ContactFormSuccess } from './components/ContactFormSuccess'
-import { Shield, Clock, TrendingUp, Calendar, CheckCircle2 } from 'lucide-react'
 
 const createFormSchema = () =>
   z.object({
@@ -30,7 +49,7 @@ const createFormSchema = () =>
     email: z
       .string()
       .min(1, 'Email address is required')
-      .email('Please enter a valid email address (e.g., john@example.com)')
+      .email('Please enter a valid email address')
       .toLowerCase()
       .trim(),
     phoneNumber: z
@@ -44,12 +63,10 @@ const createFormSchema = () =>
           return false
         }
       }, 'Please enter a valid phone number'),
-    package: z
-      .string()
-      .min(1, 'Please select a service to help us understand your needs'),
+    package: z.string().min(1, 'Please select a service'),
     message: z
       .string()
-      .min(1, 'Please tell us about your clinic and growth goals')
+      .min(1, 'Please tell us about your project')
       .min(10, 'Message must be at least 10 characters')
       .max(1000, 'Message must be less than 1000 characters'),
   })
@@ -62,23 +79,18 @@ type ContactFormData = {
   message: string
 }
 
-const trustIndicators = [
-  { icon: Shield, text: 'HIPAA Compliant Marketing' },
-  { icon: Clock, text: 'Response within 24 hrs' },
-  { icon: TrendingUp, text: '312% Avg. ROI' },
-]
-
-const benefits = [
-  'Free 30-minute growth strategy call',
-  'Clinic marketing audit included',
-  'Custom patient acquisition roadmap',
-  'No obligation, no pressure',
+const services = [
+  { value: 'website', label: 'Website Development' },
+  { value: 'ai-chatbot', label: 'AI Chatbot' },
+  { value: 'voice-agent', label: 'Voice Agent' },
+  { value: 'automation', label: 'Automation' },
+  { value: 'full-package', label: 'Full Package' },
+  { value: 'other', label: 'Other' },
 ]
 
 export function ContactForm() {
-  const [turnstileToken] = useState<string>('dummy-token')
   const [honeypot, setHoneypot] = useState<string>('')
-  const [packageDropdownOpen, setPackageDropdownOpen] = useState<boolean>(false)
+  const [selectOpen, setSelectOpen] = useState(false)
 
   const formSchema = createFormSchema()
 
@@ -94,8 +106,8 @@ export function ContactForm() {
   })
 
   const { submitForm, isSubmitting, isSuccess, error, reset } =
-    useFormSubmission({
-      formType: 'contact',
+    useConvexContactForm({
+      source: 'contact-page',
       onSuccess: async () => {
         await new Promise((resolve) => setTimeout(resolve, 500))
       },
@@ -106,10 +118,7 @@ export function ContactForm() {
       return
     }
 
-    await submitForm({
-      ...data,
-      turnstileToken,
-    })
+    await submitForm(data)
   }
 
   const handleReset = () => {
@@ -126,78 +135,285 @@ export function ContactForm() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="bg-white dark:bg-sage-900/40 rounded-3xl p-8 lg:p-12 shadow-xl border border-sage-100 dark:border-sage-800"
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="bg-white dark:bg-sage-950/60 rounded-2xl shadow-2xl shadow-sage-900/5 dark:shadow-black/20 border border-sage-100 dark:border-sage-800/50 overflow-hidden"
     >
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <Calendar className="w-6 h-6 text-sage-600 dark:text-sage-400" />
-          <span className="text-sm font-medium text-sage-600 dark:text-sage-400 uppercase tracking-wide">
-            Free Strategy Session
-          </span>
-        </div>
-        <h2 className="font-serif text-3xl md:text-4xl font-semibold text-sage-900 dark:text-cream-50 mb-3">
-          Let&apos;s Grow Your Clinic
+      {/* Form Header */}
+      <div className="px-8 pt-8 pb-6 border-b border-sage-100 dark:border-sage-800/50 bg-gradient-to-b from-sage-50/50 to-transparent dark:from-sage-900/30">
+        <h2 className="font-serif text-2xl md:text-3xl font-semibold text-sage-900 dark:text-cream-50 mb-2">
+          Start your project
         </h2>
-        <p className="text-lg text-stone-600 dark:text-stone-300">
-          Tell us about your practice and we&apos;ll show you how to attract more ideal patients.
+        <p className="text-stone-500 dark:text-stone-400">
+          Fill out the form and we&apos;ll respond within 24 hours
         </p>
       </div>
 
-      {/* Trust Indicators */}
-      <div className="flex flex-wrap gap-4 mb-8 pb-8 border-b border-sage-100 dark:border-sage-800">
-        {trustIndicators.map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"
+      <div className="p-8">
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 rounded-xl text-red-600 dark:text-red-400 text-sm"
           >
-            <item.icon className="w-4 h-4 text-sage-500" />
-            <span>{item.text}</span>
-          </div>
-        ))}
-      </div>
+            {error}
+          </motion.div>
+        )}
 
-      {error && (
-        <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-700 dark:text-red-400">
-          {error}
-        </div>
-      )}
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            {/* Section 1: Contact Info */}
+            <div className="space-y-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-sage-100 dark:bg-sage-800 text-sage-700 dark:text-sage-300 text-xs font-semibold">
+                  1
+                </span>
+                <span className="text-sm font-medium text-sage-700 dark:text-sage-300 uppercase tracking-wide">
+                  Contact Info
+                </span>
+                <div className="flex-1 h-px bg-sage-100 dark:bg-sage-800" />
+              </div>
 
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <NameEmailFields
-            control={form.control}
-            errors={form.formState.errors}
-          />
+              <div className="grid sm:grid-cols-2 gap-4">
+                {/* Name Field */}
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormControl>
+                        <div className="relative group">
+                          <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <User
+                              className={`w-5 h-5 transition-colors ${
+                                fieldState.error
+                                  ? 'text-red-400'
+                                  : field.value
+                                    ? 'text-sage-500'
+                                    : 'text-stone-300 dark:text-stone-600 group-focus-within:text-sage-500'
+                              }`}
+                            />
+                          </div>
+                          <Input
+                            placeholder="Full name"
+                            {...field}
+                            className={`h-14 pl-12 pr-4 text-base bg-cream-50/50 dark:bg-sage-900/40 border-2 rounded-xl transition-all placeholder:text-stone-400 dark:placeholder:text-stone-500 ${
+                              fieldState.error
+                                ? 'border-red-300 dark:border-red-700 focus:border-red-400'
+                                : 'border-sage-100 dark:border-sage-800 focus:border-sage-400 dark:focus:border-sage-600'
+                            } focus:ring-0 focus:bg-white dark:focus:bg-sage-900/60`}
+                          />
+                        </div>
+                      </FormControl>
+                      <FormMessage className="text-red-500 text-sm mt-1.5 ml-1" />
+                    </FormItem>
+                  )}
+                />
 
-          <PhonePackageFields
-            control={form.control}
-            packageDropdownOpen={packageDropdownOpen}
-            setPackageDropdownOpen={setPackageDropdownOpen}
-          />
+                {/* Email Field */}
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormControl>
+                        <div className="relative group">
+                          <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <Mail
+                              className={`w-5 h-5 transition-colors ${
+                                fieldState.error
+                                  ? 'text-red-400'
+                                  : field.value
+                                    ? 'text-sage-500'
+                                    : 'text-stone-300 dark:text-stone-600 group-focus-within:text-sage-500'
+                              }`}
+                            />
+                          </div>
+                          <Input
+                            type="email"
+                            placeholder="Email address"
+                            {...field}
+                            className={`h-14 pl-12 pr-4 text-base bg-cream-50/50 dark:bg-sage-900/40 border-2 rounded-xl transition-all placeholder:text-stone-400 dark:placeholder:text-stone-500 ${
+                              fieldState.error
+                                ? 'border-red-300 dark:border-red-700 focus:border-red-400'
+                                : 'border-sage-100 dark:border-sage-800 focus:border-sage-400 dark:focus:border-sage-600'
+                            } focus:ring-0 focus:bg-white dark:focus:bg-sage-900/60`}
+                          />
+                        </div>
+                      </FormControl>
+                      <FormMessage className="text-red-500 text-sm mt-1.5 ml-1" />
+                    </FormItem>
+                  )}
+                />
+              </div>
 
-          <MessageField control={form.control} />
+              {/* Phone Field - Full Width */}
+              <FormField
+                control={form.control}
+                name="phoneNumber"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative group">
+                        <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
+                          <Phone
+                            className={`w-5 h-5 transition-colors ${
+                              fieldState.error
+                                ? 'text-red-400'
+                                : field.value
+                                  ? 'text-sage-500'
+                                  : 'text-stone-300 dark:text-stone-600 group-focus-within:text-sage-500'
+                            }`}
+                          />
+                        </div>
+                        <PhoneInput
+                          international
+                          countryCallingCodeEditable={false}
+                          defaultCountry="CA"
+                          value={field.value}
+                          onChange={(value) => field.onChange(value || '')}
+                          placeholder="Phone number"
+                          className={`phone-input-custom h-14 pl-12 text-base bg-cream-50/50 dark:bg-sage-900/40 border-2 rounded-xl transition-all ${
+                            fieldState.error
+                              ? 'border-red-300 dark:border-red-700'
+                              : 'border-sage-100 dark:border-sage-800 focus-within:border-sage-400 dark:focus-within:border-sage-600'
+                          } focus-within:bg-white dark:focus-within:bg-sage-900/60`}
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage className="text-red-500 text-sm mt-1.5 ml-1" />
+                  </FormItem>
+                )}
+              />
+            </div>
 
-          <HoneypotField value={honeypot} onChange={setHoneypot} />
+            {/* Section 2: Project Details */}
+            <div className="space-y-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-sage-100 dark:bg-sage-800 text-sage-700 dark:text-sage-300 text-xs font-semibold">
+                  2
+                </span>
+                <span className="text-sm font-medium text-sage-700 dark:text-sage-300 uppercase tracking-wide">
+                  Project Details
+                </span>
+                <div className="flex-1 h-px bg-sage-100 dark:bg-sage-800" />
+              </div>
 
-          <SubmitButton isSubmitting={isSubmitting} />
-        </form>
-      </Form>
+              {/* Service Select */}
+              <FormField
+                control={form.control}
+                name="package"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative group">
+                        <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none z-10">
+                          <Briefcase
+                            className={`w-5 h-5 transition-colors ${
+                              fieldState.error
+                                ? 'text-red-400'
+                                : field.value
+                                  ? 'text-sage-500'
+                                  : 'text-stone-300 dark:text-stone-600'
+                            }`}
+                          />
+                        </div>
+                        <Select
+                          onValueChange={field.onChange}
+                          value={field.value}
+                          open={selectOpen}
+                          onOpenChange={setSelectOpen}
+                        >
+                          <SelectTrigger
+                            className={`h-14 pl-12 pr-4 text-base bg-cream-50/50 dark:bg-sage-900/40 border-2 rounded-xl transition-all ${
+                              fieldState.error
+                                ? 'border-red-300 dark:border-red-700'
+                                : 'border-sage-100 dark:border-sage-800 focus:border-sage-400 dark:focus:border-sage-600'
+                            } focus:ring-0 [&>span]:text-left`}
+                          >
+                            <SelectValue
+                              placeholder="What do you need?"
+                              className="text-stone-400"
+                            />
+                          </SelectTrigger>
+                          <SelectContent className="bg-white dark:bg-sage-900 border-sage-200 dark:border-sage-700 rounded-xl shadow-xl">
+                            {services.map((service) => (
+                              <SelectItem
+                                key={service.value}
+                                value={service.value}
+                                className="py-3 cursor-pointer focus:bg-sage-50 dark:focus:bg-sage-800"
+                              >
+                                {service.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </FormControl>
+                    <FormMessage className="text-red-500 text-sm mt-1.5 ml-1" />
+                  </FormItem>
+                )}
+              />
 
-      {/* What to Expect */}
-      <div className="mt-8 pt-8 border-t border-sage-100 dark:border-sage-800">
-        <h4 className="font-semibold text-sage-900 dark:text-cream-50 mb-4">
-          What You&apos;ll Get
-        </h4>
-        <ul className="space-y-3">
-          {benefits.map((benefit, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 text-sage-500 flex-shrink-0 mt-0.5" />
-              <span className="text-stone-600 dark:text-stone-300">{benefit}</span>
-            </li>
-          ))}
-        </ul>
+              {/* Message Field */}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormControl>
+                      <div className="relative group">
+                        <div className="absolute left-4 top-4 pointer-events-none">
+                          <MessageSquare
+                            className={`w-5 h-5 transition-colors ${
+                              fieldState.error
+                                ? 'text-red-400'
+                                : field.value
+                                  ? 'text-sage-500'
+                                  : 'text-stone-300 dark:text-stone-600 group-focus-within:text-sage-500'
+                            }`}
+                          />
+                        </div>
+                        <Textarea
+                          placeholder="Tell us about your project..."
+                          {...field}
+                          className={`min-h-[140px] pl-12 pr-4 pt-4 text-base bg-cream-50/50 dark:bg-sage-900/40 border-2 rounded-xl transition-all resize-none placeholder:text-stone-400 dark:placeholder:text-stone-500 ${
+                            fieldState.error
+                              ? 'border-red-300 dark:border-red-700 focus:border-red-400'
+                              : 'border-sage-100 dark:border-sage-800 focus:border-sage-400 dark:focus:border-sage-600'
+                          } focus:ring-0 focus:bg-white dark:focus:bg-sage-900/60`}
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage className="text-red-500 text-sm mt-1.5 ml-1" />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <HoneypotField value={honeypot} onChange={setHoneypot} />
+
+            {/* Submit Button */}
+            <motion.button
+              type="submit"
+              disabled={isSubmitting}
+              whileHover={{ scale: isSubmitting ? 1 : 1.01 }}
+              whileTap={{ scale: isSubmitting ? 1 : 0.99 }}
+              className="w-full h-14 bg-sage-600 hover:bg-sage-700 dark:bg-sage-600 dark:hover:bg-sage-500 text-white text-lg font-semibold rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-3 group shadow-lg shadow-sage-600/20"
+            >
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <span>Sending...</span>
+                </>
+              ) : (
+                <>
+                  <span>Send Message</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
+            </motion.button>
+          </form>
+        </Form>
       </div>
     </motion.div>
   )

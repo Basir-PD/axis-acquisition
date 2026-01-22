@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { ContactForm } from '@/components/contact/contact'
 import { FAQs } from '@/components/faq/faqs'
 

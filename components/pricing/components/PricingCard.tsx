@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react'
 import { CircleCheckBig } from 'lucide-react'
-import { Button } from '@/components/shared/button'
-import { Tier } from '../types'
-import { cn } from '@/utils/cn'
+import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
+import { Button } from '@/components/shared/button'
+import { cn } from '@/utils/cn'
+import type { Tier } from '../types'
 
 interface PricingCardProps {
   tier: Tier
@@ -125,7 +125,6 @@ export function PricingCard({ tier, onGetStarted }: PricingCardProps) {
               <div className="space-y-0">
                 {/* Main Features List */}
                 <ul
-                  role="list"
                   className={cn(
                     tier.featured
                       ? 'divide-gray-900/5 border-gray-900/5 text-gray-600'
@@ -161,7 +160,6 @@ export function PricingCard({ tier, onGetStarted }: PricingCardProps) {
                     )}
                   >
                     <ul
-                      role="list"
                       className={cn(
                         tier.featured
                           ? 'divide-gray-900/5 border-gray-900/5 text-gray-600'

@@ -1,8 +1,8 @@
 'use client'
 
+import { AnimatePresence, motion } from 'framer-motion'
 import { useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FAQItemProps } from '../types'
+import type { FAQItemProps } from '../types'
 
 export function FAQItem({
   question,

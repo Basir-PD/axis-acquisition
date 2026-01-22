@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { getCalApi } from '@calcom/embed-react'
+import { useEffect } from 'react'
 
 interface CalEmbedOptions {
   namespace: string
@@ -14,7 +14,7 @@ interface CalEmbedOptions {
 
 export const useCalEmbed = (options: CalEmbedOptions) => {
   useEffect(() => {
-    ;(async function () {
+    ;(async () => {
       const cal = await getCalApi({ namespace: options.namespace })
       cal('ui', {
         styles: options.styles,

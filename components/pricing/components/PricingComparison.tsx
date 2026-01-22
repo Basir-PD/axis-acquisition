@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FormattedMessage } from 'react-intl'
 import { Check, X } from 'lucide-react'
+import { FormattedMessage } from 'react-intl'
 import { Button } from '@/components/shared/button'
 
 interface ComparisonFeature {

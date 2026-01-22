@@ -1,5 +1,5 @@
-import { IntlShape } from 'react-intl'
-import { Tier } from '../types'
+import type { IntlShape } from 'react-intl'
+import type { Tier } from '../types'
 
 export const getWebsitePricingTiers = (intl: IntlShape): Tier[] => [
   {

@@ -1,5 +1,5 @@
-import { Building2, Users, TrendingUp, DollarSign } from 'lucide-react'
-import { IntlShape } from 'react-intl'
+import { Building2, DollarSign, TrendingUp, Users } from 'lucide-react'
+import type { IntlShape } from 'react-intl'
 
 export const getEnterpriseStats = (intl: IntlShape) => [
   {

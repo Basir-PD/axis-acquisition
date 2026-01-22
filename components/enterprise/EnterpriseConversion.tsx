@@ -1,11 +1,10 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useRef } from 'react'
 import { useIntl } from 'react-intl'
 import { Container } from '../hero/container'
-import CustomTypeForm from '../hero/AIAutomationTypeForm/index'
 import { AnimatedStat } from './components/AnimatedStat'
 import { BackgroundEffects } from './components/BackgroundEffects'
 import { EnterpriseHeader } from './components/EnterpriseHeader'
@@ -19,7 +18,6 @@ export default function EnterpriseConversion() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
-  const [isTypeFormOpen, setIsTypeFormOpen] = useState(false)
   const intl = useIntl()
   const enterpriseStats = getEnterpriseStats(intl)
 
@@ -81,8 +79,6 @@ export default function EnterpriseConversion() {
           ))}
         </div>
       </Container>
-
-      <CustomTypeForm isOpen={isTypeFormOpen} setIsOpen={setIsTypeFormOpen} />
     </section>
   )
 }

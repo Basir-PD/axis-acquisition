@@ -1,9 +1,9 @@
 'use client'
 
-import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import Link from 'next/link'
+import { useRef } from 'react'
 
 const benefits = [
   'Done-for-you patient acquisition',
@@ -37,7 +37,6 @@ export function Hero() {
       >
         {/* Main Content - Centered */}
         <div className="text-center max-w-4xl mx-auto">
-
           {/* Social Proof Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +46,10 @@ export function Hero() {
           >
             <div className="flex -space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                <Star
+                  key={i}
+                  className="w-4 h-4 text-amber-400 fill-amber-400"
+                />
               ))}
             </div>
             <span className="text-sm font-medium text-sage-700 dark:text-sage-300">
@@ -64,7 +66,9 @@ export function Hero() {
           >
             Get more patients.
             <br />
-            <span className="text-sage-600 dark:text-sage-400">Guaranteed.</span>
+            <span className="text-sage-600 dark:text-sage-400">
+              Guaranteed.
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -74,8 +78,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto leading-relaxed"
           >
-            We bring ready-to-book patients to integrative health practices.
-            You focus on healing—we'll handle the rest.
+            We bring ready-to-book patients to integrative health practices. You
+            focus on healing—we&apos;ll handle the rest.
           </motion.p>
 
           {/* Benefits List */}
@@ -86,9 +90,14 @@ export function Hero() {
             className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3"
           >
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-stone-700 dark:text-stone-300">
+              <div
+                key={idx}
+                className="flex items-center gap-2 text-stone-700 dark:text-stone-300"
+              >
                 <CheckCircle2 className="w-5 h-5 text-sage-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">{benefit}</span>
+                <span className="text-sm sm:text-base font-medium">
+                  {benefit}
+                </span>
               </div>
             ))}
           </motion.div>
@@ -150,13 +159,13 @@ export function Hero() {
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white dark:from-[#0c0f0c] to-transparent z-10 pointer-events-none" />
 
             {/* Scrolling track */}
-            <div className="flex animate-scroll hover:[animation-play-state:paused]" style={{ '--animation-duration': '25s' } as React.CSSProperties}>
+            <div
+              className="flex animate-scroll hover:[animation-play-state:paused]"
+              style={{ '--animation-duration': '25s' } as React.CSSProperties}
+            >
               {/* First set */}
               {[...specialties, ...specialties].map((specialty, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center mx-6 shrink-0"
-                >
+                <div key={idx} className="flex items-center mx-6 shrink-0">
                   <span className="w-2 h-2 rounded-full bg-sage-400 dark:bg-sage-500 mr-4" />
                   <span className="text-base font-medium text-sage-700 dark:text-sage-300 whitespace-nowrap">
                     {specialty}

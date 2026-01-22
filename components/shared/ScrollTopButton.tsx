@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import type React from 'react'
+import { useEffect, useState } from 'react'
 import { HiArrowCircleUp } from 'react-icons/hi'
-import { motion, AnimatePresence } from 'framer-motion'
 
 const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)

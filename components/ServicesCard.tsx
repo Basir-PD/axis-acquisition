@@ -1,7 +1,5 @@
 /* eslint-disable */
 'use client'
-import React, { useRef, useEffect, useState } from 'react'
-import { cn } from '../lib/utils'
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -12,7 +10,9 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from '@tabler/icons-react'
-import { Heading } from './shared/heading'
+import type React from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { cn } from '../lib/utils'
 
 export default function ServiceCard() {
   const features = [
@@ -62,19 +62,17 @@ export default function ServiceCard() {
   ]
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10">
-        {features.map((feature, index) => (
-          <Card
-            key={feature.title}
-            title={feature.title}
-            content={feature.content}
-            icon={feature.icon}
-            index={index}
-          />
-        ))}
-      </div>
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+      {features.map((feature, index) => (
+        <Card
+          key={feature.title}
+          title={feature.title}
+          content={feature.content}
+          icon={feature.icon}
+          index={index}
+        />
+      ))}
+    </div>
   )
 }
 

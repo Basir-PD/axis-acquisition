@@ -1,7 +1,7 @@
 'use client'
-import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Plus } from 'lucide-react'
+import { useState } from 'react'
 import {
   FaClock,
   FaCode,

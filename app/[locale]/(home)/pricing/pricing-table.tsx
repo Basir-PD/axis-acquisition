@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { IconCheck } from '@tabler/icons-react'
 import { tiers } from '@/constants/tier'
 

@@ -1,5 +1,9 @@
 'use client'
 
+import { motion } from 'framer-motion'
+import { Package, PackagePlus } from 'lucide-react'
+import Link from 'next/link'
+import { Button } from '@/components/shared/button'
 import {
   Card,
   CardContent,
@@ -7,13 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Package, PackagePlus } from 'lucide-react'
-import { motion } from 'framer-motion'
-import { Button } from '@/components/shared/button'
-import { useState } from 'react'
-import CustomTypeForm from '@/components/hero/AIAutomationTypeForm/index'
+
 export default function CustomRequirement() {
-  const [isOpen, setIsOpen] = useState(false)
   return (
     <section className="w-full px-4 py-12 bg-background">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -89,10 +88,9 @@ export default function CustomRequirement() {
           </motion.div>
         </div>
         <div className="flex justify-center items-center">
-          <Button onClick={() => setIsOpen(true)} className=" px-10  text-xl">
-            LETS DISCUSS YOUR PROJECT
-          </Button>
-          <CustomTypeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Link href="/contact">
+            <Button className="px-10 text-xl">LETS DISCUSS YOUR PROJECT</Button>
+          </Link>
         </div>
       </div>
     </section>

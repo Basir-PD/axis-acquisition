@@ -38,7 +38,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
@@ -350,6 +355,84 @@ html {
   .phone-input-split .PhoneInputInput {
     font-size: 1rem;
   }
+}
+
+/* Custom Phone Input - New Design */
+.phone-input-custom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-input-custom .PhoneInputCountry {
+  position: absolute;
+  left: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.phone-input-custom .PhoneInputCountrySelect {
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.phone-input-custom .PhoneInputCountrySelect:hover {
+  background-color: rgba(93, 127, 89, 0.1);
+}
+
+.phone-input-custom .PhoneInputCountrySelect:focus {
+  outline: none;
+  background-color: rgba(93, 127, 89, 0.15);
+}
+
+.phone-input-custom .PhoneInputCountryIcon {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.phone-input-custom .PhoneInputCountrySelectArrow {
+  width: 6px;
+  height: 6px;
+  opacity: 0.4;
+  margin-left: 2px;
+}
+
+.phone-input-custom .PhoneInputInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: inherit;
+  padding: 0 1rem 0 5.5rem;
+  height: 100%;
+}
+
+.phone-input-custom .PhoneInputInput::placeholder {
+  color: rgb(156, 163, 175);
+}
+
+.dark .phone-input-custom .PhoneInputInput::placeholder {
+  color: rgb(107, 114, 128);
+}
+
+.phone-input-custom .PhoneInputCountrySelect option {
+  padding: 0.5rem;
+  background: white;
+  color: black;
+}
+
+.dark .phone-input-custom .PhoneInputCountrySelect option {
+  background: rgb(21, 29, 21);
+  color: white;
 }
 
 /* Organic decorative elements */

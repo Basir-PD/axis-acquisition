@@ -1,8 +1,8 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { LucideIcon } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { useCountAnimation } from '../hooks/useCountAnimation'
 
 interface StatItem {

@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect, useId, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useRef } from 'react'
-import { cn } from '@/lib/utils'
+import type React from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { SparklesCore } from '@/components/ui/sparkles'
+import { cn } from '@/lib/utils'
 
 export const HeaderTitle = ({
   children,
@@ -223,7 +223,7 @@ export const CircleIcon = ({
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-primary-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        'pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-primary-600 dark:bg-white opacity-20 group-hover/cover:bg-white',
         className,
       )}
     ></div>

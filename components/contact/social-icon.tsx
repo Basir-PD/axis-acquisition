@@ -1,10 +1,10 @@
-import React from 'react'
 import {
-  IconBrandTwitter,
   IconBrandFacebook,
-  IconBrandLinkedin,
   IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandTwitter,
 } from '@tabler/icons-react'
+import type React from 'react'
 
 type SocialPlatform = 'twitter' | 'facebook' | 'linkedin' | 'github'
 

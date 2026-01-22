@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, X, Info } from 'lucide-react'
+import { Check, Info, X } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,

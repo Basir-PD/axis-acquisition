@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+
 const {
   default: flattenColorPalette,
   // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -31,10 +32,8 @@ const config: Config = {
           'linear-gradient(135deg, #f8faf8 0%, #e8f0e8 50%, #f5f0eb 100%)',
         'hero-gradient-dark':
           'linear-gradient(135deg, #1a1f1a 0%, #0f1a14 50%, #1a1816 100%)',
-        'sage-gradient':
-          'linear-gradient(135deg, #87a878 0%, #6b8f5e 100%)',
-        'warm-gradient':
-          'linear-gradient(135deg, #d4c4b0 0%, #c4b49a 100%)',
+        'sage-gradient': 'linear-gradient(135deg, #87a878 0%, #6b8f5e 100%)',
+        'warm-gradient': 'linear-gradient(135deg, #d4c4b0 0%, #c4b49a 100%)',
         'wellness-mesh':
           'radial-gradient(at 40% 20%, hsla(120, 28%, 89%, 0.6) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(35, 30%, 90%, 0.5) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(200, 25%, 90%, 0.4) 0px, transparent 50%)',
         'wellness-mesh-dark':
@@ -127,7 +126,7 @@ const config: Config = {
         shimmer: 'shimmer 2s linear infinite',
         'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
-        'breathe': 'breathe 4s ease-in-out infinite',
+        breathe: 'breathe 4s ease-in-out infinite',
         'slide-up': 'slide-up 0.5s ease-out',
         'slide-down': 'slide-down 0.3s ease-out',
       },
@@ -136,14 +135,18 @@ const config: Config = {
         'glass-dark': 'rgba(0, 0, 0, 0.2)',
       },
       boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-        wellness: `0 4px 6px -1px rgba(93, 127, 89, 0.1), 0 2px 4px -2px rgba(93, 127, 89, 0.1)`,
-        'wellness-lg': `0 10px 15px -3px rgba(93, 127, 89, 0.1), 0 4px 6px -4px rgba(93, 127, 89, 0.1)`,
-        'wellness-xl': `0 20px 25px -5px rgba(93, 127, 89, 0.1), 0 8px 10px -6px rgba(93, 127, 89, 0.1)`,
-        organic: `0 4px 20px rgba(93, 127, 89, 0.15)`,
-        'organic-hover': `0 8px 30px rgba(93, 127, 89, 0.2)`,
-        card: `0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)`,
-        'card-hover': `0 10px 40px rgba(0,0,0,0.08)`,
+        input:
+          '0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)',
+        wellness:
+          '0 4px 6px -1px rgba(93, 127, 89, 0.1), 0 2px 4px -2px rgba(93, 127, 89, 0.1)',
+        'wellness-lg':
+          '0 10px 15px -3px rgba(93, 127, 89, 0.1), 0 4px 6px -4px rgba(93, 127, 89, 0.1)',
+        'wellness-xl':
+          '0 20px 25px -5px rgba(93, 127, 89, 0.1), 0 8px 10px -6px rgba(93, 127, 89, 0.1)',
+        organic: '0 4px 20px rgba(93, 127, 89, 0.15)',
+        'organic-hover': '0 8px 30px rgba(93, 127, 89, 0.2)',
+        card: '0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
+        'card-hover': '0 10px 40px rgba(0,0,0,0.08)',
         'glass-light': '0 4px 6px rgba(0, 0, 0, 0.05)',
         'glass-dark': '0 4px 6px rgba(0, 0, 0, 0.5)',
       },

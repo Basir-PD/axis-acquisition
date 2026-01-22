@@ -13,7 +13,9 @@ This is a Next.js 14 web application for a digital agency offering web developme
 npm run dev        # Start development server on http://localhost:3000
 npm run build      # Build for production
 npm run start      # Start production server
-npm run lint       # Run ESLint
+npm run lint       # Run Biome linter and formatter checks
+npm run lint:fix   # Run Biome and fix issues automatically
+npm run format     # Format all files with Biome
 ```
 
 ### Testing
@@ -25,7 +27,7 @@ The project uses Jest and React Testing Library. Tests are located in `__tests__
 
 ### Git Hooks
 Husky is configured with pre-commit hooks:
-- `npx lint-staged` - Runs ESLint and Prettier on staged files
+- `npx lint-staged` - Runs Biome on staged files (check and format)
 
 ## Project Architecture
 
@@ -37,6 +39,7 @@ Husky is configured with pre-commit hooks:
 - **i18n**: next-i18n-router with react-intl
 - **Email**: Resend with react-email
 - **Analytics**: Vercel Analytics, Google Analytics, Meta Pixel
+- **Code Quality**: Biome (linting, formatting, import sorting)
 
 ### Directory Structure
 
@@ -164,8 +167,10 @@ useEffect(() => {
 ### Code Style
 - Use TypeScript path alias `@/*` to reference project root
 - Use `cn()` utility (from `utils/cn.ts`) for conditional className merging
-- Prefix unused variables with `_` (configured in ESLint)
-- Avoid `console.log` (use `console.warn` or `console.error` if needed)
+- Prefix unused variables with `_` (Biome will not warn about these)
+- Avoid `console.log` (use `console.warn` or `console.error` if needed - enforced by Biome)
+- Code formatting is handled by Biome (single quotes, 2 spaces, semicolons as needed)
+- Biome automatically organizes imports on save
 
 ### Comments
 - Add comments with examples when logic is non-obvious

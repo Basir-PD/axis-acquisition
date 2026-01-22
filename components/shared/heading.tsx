@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils'
-import { AnimationProps, MotionProps } from 'framer-motion'
-import React from 'react'
+import type { AnimationProps, MotionProps } from 'framer-motion'
+import type React from 'react'
 import Balancer from 'react-wrap-balancer'
+import { cn } from '@/lib/utils'
 
 export const Heading = ({
   className,

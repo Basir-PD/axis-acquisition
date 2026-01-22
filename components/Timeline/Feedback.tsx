@@ -1,9 +1,9 @@
 'use client'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { IpadCard } from './IpadCard'
 import { useInView } from 'react-intersection-observer'
+import { IpadCard } from './IpadCard'
 
 interface FeedbackPosition {
   mobile: string

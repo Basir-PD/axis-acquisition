@@ -1,13 +1,11 @@
-import { Metadata } from 'next'
-
-import type { NextPage } from 'next'
+import type { Metadata, NextPage } from 'next'
 import Image from 'next/image'
 import { Container } from '@/components/hero/container'
 import Beam from '@/components/packages-components/Beam/Beam'
+import { CallToAction } from '@/components/packages-components/CTA'
 import { Products } from '@/components/packages-components/Products'
 import { Testimonial } from '@/components/packages-components/Testimonial'
 import { testimonials } from '@/components/packages-components/testimonials'
-import { CallToAction } from '@/components/packages-components/CTA'
 import ScrollToTopButton from '@/components/shared/ScrollTopButton'
 
 export const metadata: Metadata = {
@@ -104,8 +102,10 @@ const PackagesPage: NextPage = () => {
       <Testimonial testimonial={testimonials[0]} />
 
       <CallToAction
-        headerText={`Want a custom website or more features? Talk to us.`}
-        bodyText={`See the blue chat box and the bottom? Click on it and talk to us. We will get back to you within 24 hours. Or just email us, just talk. :)`}
+        headerText={'Want a custom website or more features? Talk to us.'}
+        bodyText={
+          'See the blue chat box and the bottom? Click on it and talk to us. We will get back to you within 24 hours. Or just email us, just talk. :)'
+        }
       />
       <ScrollToTopButton />
     </Container>

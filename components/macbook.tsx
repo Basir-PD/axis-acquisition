@@ -1,29 +1,29 @@
 'use client'
-import React from 'react'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 import {
   IconBrightnessDown,
   IconBrightnessUp,
+  IconCaretDownFilled,
+  IconCaretLeftFilled,
   IconCaretRightFilled,
   IconCaretUpFilled,
   IconChevronUp,
+  IconCommand,
   IconMicrophone,
   IconMoon,
   IconPlayerSkipForward,
   IconPlayerTrackNext,
   IconPlayerTrackPrev,
+  IconSearch,
   IconTable,
   IconVolume,
   IconVolume2,
   IconVolume3,
+  IconWorld,
 } from '@tabler/icons-react'
-import { IconSearch } from '@tabler/icons-react'
-import { IconWorld } from '@tabler/icons-react'
-import { IconCommand } from '@tabler/icons-react'
-import { IconCaretLeftFilled } from '@tabler/icons-react'
-import { IconCaretDownFilled } from '@tabler/icons-react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+import type React from 'react'
+import { cn } from '@/lib/utils'
 
 const lidContainerVariants = {
   hover: {
@@ -309,16 +309,16 @@ export const Keypad = () => {
           <span className="block">P</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`{`}</span>
-          <span className="block">{`[`}</span>
+          <span className="block">{'{'}</span>
+          <span className="block">{'['}</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`}`}</span>
-          <span className="block">{`]`}</span>
+          <span className="block">{'}'}</span>
+          <span className="block">{']'}</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`|`}</span>
-          <span className="block">{`\\`}</span>
+          <span className="block">{'|'}</span>
+          <span className="block">{'\\'}</span>
         </KBtn>
       </Row>
 
@@ -359,8 +359,8 @@ export const Keypad = () => {
           <span className="block">L</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`:`}</span>
-          <span className="block">{`;`}</span>
+          <span className="block">{':'}</span>
+          <span className="block">{';'}</span>
         </KBtn>
         <KBtn>
           <span className="block">{`"`}</span>
@@ -404,16 +404,16 @@ export const Keypad = () => {
           <span className="block">M</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`<`}</span>
-          <span className="block">{`,`}</span>
+          <span className="block">{'<'}</span>
+          <span className="block">{','}</span>
         </KBtn>
         <KBtn>
-          <span className="block">{`>`}</span>
-          <span className="block">{`.`}</span>
+          <span className="block">{'>'}</span>
+          <span className="block">{'.'}</span>
         </KBtn>{' '}
         <KBtn>
-          <span className="block">{`?`}</span>
-          <span className="block">{`/`}</span>
+          <span className="block">{'?'}</span>
+          <span className="block">{'/'}</span>
         </KBtn>
         <KBtn
           className="w-[3.65rem] items-end justify-end pr-[4px] pb-[2px]"

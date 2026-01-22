@@ -1,20 +1,19 @@
 'use client'
 
-import Link from 'next/link'
-import React from 'react'
-import { usePathname } from 'next/navigation'
 import {
-  Leaf,
-  Phone,
-  Mail,
+  ArrowRight,
   Clock,
   Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
   Heart,
-  ArrowRight,
+  Instagram,
+  Leaf,
+  Linkedin,
+  Mail,
+  Phone,
+  Youtube,
 } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export const Footer = () => {
   const pathname = usePathname()
@@ -107,21 +106,28 @@ export const Footer = () => {
             </Link>
 
             <p className="text-sage-300 leading-relaxed mb-6 max-w-sm">
-              Full-service patient acquisition marketing for integrative health clinics.
-              We fill your calendar with patients who value holistic care.
+              Full-service patient acquisition marketing for integrative health
+              clinics. We fill your calendar with patients who value holistic
+              care.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sage-300">
                 <Phone className="w-5 h-5 text-sage-500 flex-shrink-0" />
-                <Link href="tel:+15551234567" className="hover:text-white transition-colors">
+                <Link
+                  href="tel:+15551234567"
+                  className="hover:text-white transition-colors"
+                >
                   (555) 123-4567
                 </Link>
               </div>
               <div className="flex items-center gap-3 text-sage-300">
                 <Mail className="w-5 h-5 text-sage-500 flex-shrink-0" />
-                <Link href="mailto:hello@axisacquisition.com" className="hover:text-white transition-colors">
+                <Link
+                  href="mailto:hello@axisacquisition.com"
+                  className="hover:text-white transition-colors"
+                >
                   hello@axisacquisition.com
                 </Link>
               </div>
@@ -211,10 +217,13 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-sage-400 text-center md:text-left">
-              &copy; {new Date().getFullYear()} Axis Patient Acquisition. All rights reserved.
+              &copy; {new Date().getFullYear()} Axis Patient Acquisition. All
+              rights reserved.
             </p>
             <p className="flex items-center gap-1 text-sm text-sage-400">
-              Crafted with <Heart className="w-4 h-4 text-rose-400 fill-rose-400" /> for integrative health clinics
+              Crafted with{' '}
+              <Heart className="w-4 h-4 text-rose-400 fill-rose-400" /> for
+              integrative health clinics
             </p>
           </div>
         </div>

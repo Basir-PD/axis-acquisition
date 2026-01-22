@@ -1,7 +1,7 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import { Modal, ModalBody, ModalTrigger } from '../animations/animated-modal'
+import { useEffect, useState } from 'react'
 import { InlineWidget } from 'react-calendly'
+import { Modal, ModalBody, ModalTrigger } from '../animations/animated-modal'
 import LottieAnimation from './LottieAnimation'
 
 export function AnimatedModal() {

@@ -1,18 +1,18 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import Link from 'next/link'
 import {
+  BarChart3,
+  Calendar,
+  ChevronRight,
   Globe,
   Megaphone,
   Search,
-  BarChart3,
-  Calendar,
-  Users,
   Sparkles,
-  ChevronRight,
+  Users,
 } from 'lucide-react'
+import Link from 'next/link'
+import { useRef } from 'react'
 
 const services = [
   {
@@ -36,7 +36,11 @@ const services = [
     title: 'Local SEO & Google Maps',
     description:
       'Dominate local search results so patients find your clinic first. Optimize your Google Business Profile and build local authority.',
-    highlights: ['Google Business Profile', 'Local Citations', 'Review Generation'],
+    highlights: [
+      'Google Business Profile',
+      'Local Citations',
+      'Review Generation',
+    ],
     color: 'sky',
   },
   {
@@ -60,7 +64,11 @@ const services = [
     title: 'Patient Retention & Referrals',
     description:
       'Turn one-time patients into lifetime advocates. Automated follow-up systems, review requests, and referral programs that grow organically.',
-    highlights: ['Automated Follow-ups', 'Review Campaigns', 'Referral Systems'],
+    highlights: [
+      'Automated Follow-ups',
+      'Review Campaigns',
+      'Referral Systems',
+    ],
     color: 'sage',
   },
 ]
@@ -111,11 +119,14 @@ export const Services = () => {
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-sage-900 dark:text-cream-50 leading-tight">
             Everything Your Clinic Needs to{' '}
-            <span className="text-sage-600 dark:text-sage-400">Grow Online</span>
+            <span className="text-sage-600 dark:text-sage-400">
+              Grow Online
+            </span>
           </h2>
           <p className="mt-6 text-lg text-stone-600 dark:text-stone-300 leading-relaxed">
-            Full-service digital marketing built exclusively for integrative health practices.
-            We handle the marketing so you can focus on patient care.
+            Full-service digital marketing built exclusively for integrative
+            health practices. We handle the marketing so you can focus on
+            patient care.
           </p>
         </motion.div>
 

@@ -1,16 +1,16 @@
 'use client'
-import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
-import React, { useId } from 'react'
+import { useId } from 'react'
+import { cn } from '@/lib/utils'
 
 export const Background = () => {
   return (
     <div className="absolute inset-0 h-full w-full pointer-events-none z-0">
       <div className="absolute inset-0 h-full w-full light:bg-gray-50  dark:bg-glass-dark  pointer-events-none " />
       {Array.from({ length: 6 }).map((_, index) => (
-        <div className="flex" key={'grid-column' + index}>
+        <div className="flex" key={`grid-column${index}`}>
           {Array.from({ length: 10 }).map((_, index) => (
-            <GridBlock key={`grid-row` + index} />
+            <GridBlock key={`grid-row${index}`} />
           ))}
         </div>
       ))}

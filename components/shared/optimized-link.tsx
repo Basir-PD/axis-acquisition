@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ReactNode, MouseEvent } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 
 interface OptimizedLinkProps {
   href: string

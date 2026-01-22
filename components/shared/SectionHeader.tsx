@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
-import { Heading } from './heading'
 import { Subheading } from '../subheading'
+import { Heading } from './heading'
 
 interface SectionHeaderProps {
   title: string

@@ -1,11 +1,11 @@
-import { Container } from '@/components/hero/container'
-import { Metadata } from 'next'
-import PricingComponents from '@/components/pricing'
-import Beam from '@/components/packages-components/Beam/Beam'
+import type { Metadata } from 'next'
 import Image from 'next/image'
-import IncludeCard from '../../../../components/pricing/IncludeCard'
+import { Container } from '@/components/hero/container'
+import Beam from '@/components/packages-components/Beam/Beam'
+import PricingComponents from '@/components/pricing'
 import CustomRequirement from '@/components/pricing/CustomRequirement'
 import { PackageComparison } from '@/components/pricing/PackageComparison'
+import IncludeCard from '../../../../components/pricing/IncludeCard'
 
 export const metadata: Metadata = {
   title: 'Pricing Plans - Axis Acquisition | Transparent Web Development Costs',

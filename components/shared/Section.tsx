@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import type { ReactNode } from 'react'
 import useInView from '../animations/use-in-view'
-import { ReactNode } from 'react'
 
 interface ChildProps {
   children: ReactNode

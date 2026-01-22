@@ -1,7 +1,7 @@
 'use client'
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
-import { motion, AnimatePresence } from 'framer-motion'
-import React, { useRef, useState, useEffect } from 'react'
 export const BackgroundBeamsWithCollision = ({
   children,
   className,
@@ -78,7 +78,7 @@ export const BackgroundBeamsWithCollision = ({
       {!isOpen &&
         beams.map((beam) => (
           <CollisionMechanism
-            key={beam.initialX + 'beam-idx'}
+            key={`${beam.initialX}beam-idx`}
             beamOptions={beam}
             containerRef={containerRef}
             parentRef={parentRef}

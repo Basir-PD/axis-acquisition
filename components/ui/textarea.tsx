@@ -1,8 +1,8 @@
 'use client'
 
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import * as React from 'react'
 import { cn } from '@/lib/utils'
-import { useMotionTemplate, useMotionValue, motion } from 'framer-motion'
 
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
@@ -31,7 +31,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         style={{
           background: useMotionTemplate`
             radial-gradient(
-              ${visible ? radius + 'px' : '0px'} circle at ${mouseX}px ${mouseY}px,
+              ${visible ? `${radius}px` : '0px'} circle at ${mouseX}px ${mouseY}px,
               var(--blue-500),
               transparent 80%
             )

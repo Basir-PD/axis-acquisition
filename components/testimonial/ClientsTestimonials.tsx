@@ -1,12 +1,21 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Container } from '../hero/container'
-import { useMediaQuery } from 'react-responsive'
-import { Star, Quote, Building2, TrendingUp, Users, ChevronDown, ChevronUp, MapPin } from 'lucide-react'
+import {
+  Building2,
+  ChevronDown,
+  ChevronUp,
+  MapPin,
+  Quote,
+  Star,
+  TrendingUp,
+  Users,
+} from 'lucide-react'
 import Image from 'next/image'
+import { useRef, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
+import { cn } from '@/lib/utils'
+import { Container } from '../hero/container'
 
 interface Testimonial {
   name: string
@@ -23,7 +32,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Dr. Sarah Mitchell',
     quote:
-      "Before working with this team, we were struggling to get new patients. Our website was outdated and we had no digital presence. Within 6 months, we went from 15 new patients a month to over 60. They truly understand the integrative health space.",
+      'Before working with this team, we were struggling to get new patients. Our website was outdated and we had no digital presence. Within 6 months, we went from 15 new patients a month to over 60. They truly understand the integrative health space.',
     clinicName: 'Restore Wellness Center',
     location: 'Austin, TX',
     results: '300% increase in new patients',
@@ -34,7 +43,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Dr. Michael Chen',
     quote:
-      "I was skeptical about digital marketing after being burned by generic agencies. But these guys specialize in integrative medicine - they know our patients, our language, and what makes us unique. Our ROI has been incredible.",
+      'I was skeptical about digital marketing after being burned by generic agencies. But these guys specialize in integrative medicine - they know our patients, our language, and what makes us unique. Our ROI has been incredible.',
     clinicName: 'Functional Health Institute',
     location: 'San Diego, CA',
     results: '420% return on ad spend',
@@ -45,7 +54,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Dr. Amanda Foster',
     quote:
-      "The new website and booking system completely transformed our practice. Patients actually book online now instead of calling. My front desk staff can focus on patient care instead of playing phone tag.",
+      'The new website and booking system completely transformed our practice. Patients actually book online now instead of calling. My front desk staff can focus on patient care instead of playing phone tag.',
     clinicName: 'Vitality Integrative Medicine',
     location: 'Denver, CO',
     results: '85% online booking rate',
@@ -258,8 +267,19 @@ function FeaturedTestimonial() {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <pattern id="testimonial-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <pattern
+            id="testimonial-pattern"
+            x="0"
+            y="0"
+            width="20"
+            height="20"
+            patternUnits="userSpaceOnUse"
+          >
             <circle cx="10" cy="10" r="1" fill="currentColor" />
           </pattern>
           <rect fill="url(#testimonial-pattern)" width="100%" height="100%" />
@@ -289,13 +309,18 @@ function FeaturedTestimonial() {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <div>
               <h4 className="font-bold text-white text-lg">{featured.name}</h4>
-              <p className="text-sage-200">{featured.clinicName} • {featured.location}</p>
+              <p className="text-sage-200">
+                {featured.clinicName} • {featured.location}
+              </p>
             </div>
             <div className="hidden sm:block w-px h-10 bg-sage-500" />
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-amber-400 fill-amber-400"
+                  />
                 ))}
               </div>
             </div>
@@ -305,7 +330,9 @@ function FeaturedTestimonial() {
           {featured.results && (
             <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
               <TrendingUp className="w-5 h-5 text-sage-200" />
-              <span className="text-white font-semibold">{featured.results}</span>
+              <span className="text-white font-semibold">
+                {featured.results}
+              </span>
             </div>
           )}
         </div>
@@ -434,12 +461,11 @@ export const Testimonials = () => {
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-sage-900 dark:text-cream-50 leading-tight mb-4">
             Clinics We&apos;ve Helped{' '}
-            <span className="text-sage-600 dark:text-sage-400">
-              Grow
-            </span>
+            <span className="text-sage-600 dark:text-sage-400">Grow</span>
           </h2>
           <p className="text-lg md:text-xl text-stone-600 dark:text-stone-300 max-w-2xl mx-auto">
-            Hear from integrative health practitioners who transformed their practices with our marketing systems
+            Hear from integrative health practitioners who transformed their
+            practices with our marketing systems
           </p>
         </motion.div>
 
@@ -479,7 +505,10 @@ export const Testimonials = () => {
             <div className="text-left">
               <div className="flex items-center gap-1 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  <Star
+                    key={i}
+                    className="w-4 h-4 text-amber-400 fill-amber-400"
+                  />
                 ))}
                 <span className="ml-1 text-sm font-semibold text-sage-700 dark:text-sage-300">
                   5.0/5

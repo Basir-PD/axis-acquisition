@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo } from 'react'
-import { useIntl, FormattedMessage } from 'react-intl'
-import { FAQItem } from './components/FAQItem'
-import { FAQHeader } from './components/FAQHeader'
-import { FAQCTA } from './components/FAQCTA'
-import { useFaqData } from './constants/faqData'
 import { IconSearch, IconX } from '@tabler/icons-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
+import { FAQCTA } from './components/FAQCTA'
+import { FAQHeader } from './components/FAQHeader'
+import { FAQItem } from './components/FAQItem'
+import { useFaqData } from './constants/faqData'
 
 interface SearchableFAQsProps {
   hideCTA?: boolean

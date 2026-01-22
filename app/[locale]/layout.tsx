@@ -1,21 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { GeistSans } from 'geist/font/sans'
-import { cn } from '@/lib/utils'
-// import { ViewTransitions } from 'next-view-transitions'
-import { ThemeProvider } from '@/context/theme-provider'
 import ClientIntlProvider from '@/components/providers/ClientIntlProvider'
-import { AuthProvider } from '@/contexts/AuthContext'
-import { ProjectProvider } from '@/contexts/ProjectContext'
+import { ConvexClientProvider } from '@/components/providers/ConvexClientProvider'
+import { ThemeProvider } from '@/context/theme-provider'
+import { cn } from '@/lib/utils'
 
 import '../embla.css'
-import { ConditionalFooter } from '@/components/layout/ConditionalFooter'
-import CookieConsent from '@/components/shared/CookieConsent'
-import GoogleAnalytics from '@/components/shared/GoogleAnalytics'
-import MetaPixel from '@/components/shared/MetaPixel'
-import { ContactPreloader } from '@/components/shared/ContactPreloader'
 import { Analytics } from '@vercel/analytics/next'
+import { ConditionalFooter } from '@/components/layout/ConditionalFooter'
 import { ConditionalNavbar } from '@/components/layout/ConditionalNavbar'
+import { ContactPreloader } from '@/components/shared/ContactPreloader'
+import CookieConsent from '@/components/shared/CookieConsent'
 import { Toaster } from '@/components/ui/sonner'
 export const metadata: Metadata = {
   title: 'Axis Acquisition',
@@ -63,7 +59,7 @@ export default async function RootLayout({
   try {
     const rawMessages = (await import(`@/locales/${locale}.json`)).default
     messages = flattenMessages(rawMessages)
-  } catch (error) {
+  } catch (_error) {
     // Failed to load messages for locale, falling back to English
     const rawMessages = (await import('@/locales/en.json')).default
     messages = flattenMessages(rawMessages)
@@ -102,30 +98,26 @@ export default async function RootLayout({
           'bg-white  dark:bg-neutral-900 antialiased h-full w-full',
         )}
       >
-        <ClientIntlProvider locale={locale} messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            enableSystem
-            disableTransitionOnChange
-            defaultTheme="light"
-          >
-            <AuthProvider>
-              <ProjectProvider>
-                <GoogleAnalytics />
-                <MetaPixel />
-                <Analytics />
-                <ContactPreloader />
-                <ConditionalNavbar />
-                <main>{children}</main>
-                <footer>
-                  <ConditionalFooter />
-                </footer>
-                <CookieConsent />
-                <Toaster position="top-center" richColors />
-              </ProjectProvider>
-            </AuthProvider>
-          </ThemeProvider>
-        </ClientIntlProvider>
+        <ConvexClientProvider>
+          <ClientIntlProvider locale={locale} messages={messages}>
+            <ThemeProvider
+              attribute="class"
+              enableSystem
+              disableTransitionOnChange
+              defaultTheme="light"
+            >
+              <Analytics />
+              <ContactPreloader />
+              <ConditionalNavbar />
+              <main>{children}</main>
+              <footer>
+                <ConditionalFooter />
+              </footer>
+              <CookieConsent />
+              <Toaster position="top-center" richColors />
+            </ThemeProvider>
+          </ClientIntlProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   )

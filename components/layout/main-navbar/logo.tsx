@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { Leaf } from 'lucide-react'
+import Link from 'next/link'
 
 interface LogoProps {
   visible?: boolean

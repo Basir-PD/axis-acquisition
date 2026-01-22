@@ -13,7 +13,7 @@ export function useCountAnimation(end: number, duration: number = 2) {
       const elapsed = currentTime - startTime
       const progress = Math.min(elapsed / (duration * 1000), 1)
 
-      const easeOut = 1 - Math.pow(1 - progress, 3)
+      const easeOut = 1 - (1 - progress) ** 3
       const current = Math.floor(end * easeOut)
 
       setCount(current)

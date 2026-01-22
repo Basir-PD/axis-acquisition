@@ -1,7 +1,7 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
-import styles from './style.module.css'
+import { useEffect, useRef } from 'react'
 import { cn } from '@/lib/utils'
+import styles from './style.module.css'
 
 const Beam = ({ showBeam, className }: any) => {
   const meteorRef = useRef<any>(null)

@@ -1,5 +1,5 @@
-import { TimelineStep } from '../components/TimelineStep'
 import { FormattedMessage } from 'react-intl'
+import { TimelineStep } from '../components/TimelineStep'
 
 export const getTimelineData = (intl: any) => [
   {

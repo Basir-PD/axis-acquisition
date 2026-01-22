@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+
 interface PuzzlePieceProps {
   text: string
   color: string
@@ -35,7 +36,9 @@ function LaunchCard() {
 const PuzzlePiece: React.FC<PuzzlePieceProps> = () => {
   return (
     <motion.div
-      className={`h-full w-full flex justify-center items-center p-5 bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/70 dark:to-purple-900/70 rounded-lg shadow-sm  transition-all duration-300 ease-in-out`} // Added gradient background
+      className={
+        'h-full w-full flex justify-center items-center p-5 bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/70 dark:to-purple-900/70 rounded-lg shadow-sm  transition-all duration-300 ease-in-out'
+      } // Added gradient background
     >
       <LaunchCard />
     </motion.div>

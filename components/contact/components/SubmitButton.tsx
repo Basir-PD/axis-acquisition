@@ -1,6 +1,6 @@
-import React from 'react'
+import { ArrowRight, Calendar } from 'lucide-react'
+import type React from 'react'
 import { Button } from '@/components/ui/button'
-import { Calendar, ArrowRight } from 'lucide-react'
 
 interface SubmitButtonProps {
   isSubmitting: boolean
