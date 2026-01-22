@@ -11,7 +11,7 @@ const benefits = [
   'Results in 30 days or less',
 ]
 
-const trustedLogos = [
+const specialties = [
   'Functional Medicine',
   'Naturopathic',
   'Holistic Health',
@@ -74,8 +74,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto leading-relaxed"
           >
-            The only marketing agency built exclusively for functional medicine
-            and integrative health practices. We fill your calendar — you focus on healing.
+            We bring ready-to-book patients to integrative health practices.
+            You focus on healing—we'll handle the rest.
           </motion.p>
 
           {/* Benefits List */}
@@ -132,23 +132,38 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-20 pt-12 border-t border-sage-200/50 dark:border-sage-800/30"
+          className="mt-20 pt-12"
         >
-          <p className="text-center text-sm font-medium text-stone-500 dark:text-stone-500 uppercase tracking-wider mb-8">
-            Trusted by clinics specializing in
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12">
-            {trustedLogos.map((logo, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.4, delay: 0.7 + idx * 0.1 }}
-                className="text-stone-400 dark:text-stone-600 font-medium text-sm md:text-base"
-              >
-                {logo}
-              </motion.div>
-            ))}
+          {/* Decorative line with text */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-sage-300 dark:to-sage-700" />
+            <p className="text-sm font-semibold text-sage-700 dark:text-sage-300 uppercase tracking-[0.2em]">
+              Trusted by clinics specializing in
+            </p>
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-sage-300 dark:to-sage-700" />
+          </div>
+
+          {/* Marquee Container */}
+          <div className="relative overflow-hidden py-4">
+            {/* Fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white dark:from-[#0c0f0c] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white dark:from-[#0c0f0c] to-transparent z-10 pointer-events-none" />
+
+            {/* Scrolling track */}
+            <div className="flex animate-scroll hover:[animation-play-state:paused]" style={{ '--animation-duration': '25s' } as React.CSSProperties}>
+              {/* First set */}
+              {[...specialties, ...specialties].map((specialty, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center mx-6 shrink-0"
+                >
+                  <span className="w-2 h-2 rounded-full bg-sage-400 dark:bg-sage-500 mr-4" />
+                  <span className="text-base font-medium text-sage-700 dark:text-sage-300 whitespace-nowrap">
+                    {specialty}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
 

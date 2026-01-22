@@ -14,7 +14,7 @@ export function EnterpriseHeader() {
         </span>
       </div>
 
-      <h2 className="font-serif text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 dark:text-cream-50 mb-6 leading-tight max-w-5xl mx-auto">
+      <h2 className="font-serif text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 dark:text-cream-50 mb-6 leading-snug max-w-5xl mx-auto">
         <span className="block">
           <FormattedMessage
             id="enterprise.title.process"

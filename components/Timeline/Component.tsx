@@ -43,15 +43,15 @@ function TimelineStep({
   return (
     <motion.div
       ref={stepRef}
-      className="relative grid grid-cols-[auto_1fr] md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 lg:gap-12"
+      className="relative grid grid-cols-[auto_1fr] md:grid-cols-[auto_auto_1fr] gap-4 md:gap-6 lg:gap-8"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6, delay: 0.1 }}
     >
       {/* Left content - Number (hidden on mobile, shown on md+) */}
-      <div className="hidden md:flex items-start justify-end pt-4">
+      <div className="hidden md:flex items-start justify-start pt-4">
         <motion.span
-          className="text-[120px] lg:text-[160px] font-serif font-bold leading-none select-none text-sage-100 dark:text-sage-900/40"
+          className="text-[100px] lg:text-[120px] font-serif font-bold leading-none select-none text-sage-100 dark:text-sage-900/40"
           style={{ fontFeatureSettings: '"tnum"' }}
           initial={{ opacity: 0, x: -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -63,7 +63,7 @@ function TimelineStep({
 
       {/* Center - Timeline connector */}
       <div className="relative flex flex-col items-center">
-        {/* Continuous vertical line - positioned absolutely behind the icon */}
+        {/* Continuous vertical line */}
         <div
           className={`absolute left-1/2 -translate-x-1/2 w-[2px] bg-sage-200 dark:bg-sage-800 ${
             isFirst ? 'top-[28px] md:top-[32px]' : 'top-0'
@@ -72,8 +72,8 @@ function TimelineStep({
           }`}
         />
 
-        {/* Node/Icon - with padding to create space */}
-        <div className={`relative z-10 ${!isFirst ? 'mt-0' : ''}`}>
+        {/* Icon Node */}
+        <div className="relative z-10">
           <motion.div
             className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white dark:bg-[#141a14] border-2 border-sage-200 dark:border-sage-700/60 flex items-center justify-center text-sage-600 dark:text-sage-400 shadow-lg shadow-sage-200/50 dark:shadow-sage-950/50"
             initial={{ scale: 0, rotate: -180 }}
