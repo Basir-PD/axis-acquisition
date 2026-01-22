@@ -1,10 +1,9 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { Cookie, ExternalLink, Settings, Shield, X } from 'lucide-react'
+import { ChevronDown, X } from 'lucide-react'
 import type React from 'react'
 import { useEffect, useState } from 'react'
-import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 interface CookieConsentProps {
@@ -14,21 +13,21 @@ interface CookieConsentProps {
 interface CookieSettings {
   necessary: boolean
   analytics: boolean
+  marketing: boolean
 }
 
 const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
   const [isVisible, setIsVisible] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
   const [settings, setSettings] = useState<CookieSettings>({
-    necessary: true, // Always required
+    necessary: true,
     analytics: false,
+    marketing: false,
   })
 
   useEffect(() => {
-    // Check if user has already made a choice
     const consent = localStorage.getItem('axisacquisition-cookie-consent')
     if (!consent) {
-      // Delay showing banner for better UX
       const timer = setTimeout(() => setIsVisible(true), 1500)
       return () => clearTimeout(timer)
     }
@@ -38,7 +37,8 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
     const consentData = {
       settings: consentSettings,
       timestamp: new Date().toISOString(),
-      version: '1.0',
+      version: '2.0',
+      region: Intl.DateTimeFormat().resolvedOptions().timeZone,
     }
 
     localStorage.setItem(
@@ -46,7 +46,6 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
       JSON.stringify(consentData),
     )
 
-    // Dispatch custom event for Google Analytics integration
     window.dispatchEvent(
       new CustomEvent('cookieConsentUpdate', {
         detail: consentSettings,
@@ -57,27 +56,27 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
   }
 
   const handleAcceptAll = () => {
-    const allAccepted = {
+    saveConsent({
       necessary: true,
       analytics: true,
-    }
-    saveConsent(allAccepted)
+      marketing: true,
+    })
   }
 
-  const handleAcceptNecessary = () => {
-    const necessaryOnly = {
+  const handleRejectAll = () => {
+    saveConsent({
       necessary: true,
       analytics: false,
-    }
-    saveConsent(necessaryOnly)
+      marketing: false,
+    })
   }
 
   const handleSaveSettings = () => {
     saveConsent(settings)
   }
 
-  const handleToggleSetting = (key: keyof CookieSettings) => {
-    if (key === 'necessary') return // Cannot disable necessary cookies
+  const handleToggle = (key: keyof CookieSettings) => {
+    if (key === 'necessary') return
     setSettings((prev) => ({
       ...prev,
       [key]: !prev[key],
@@ -92,212 +91,206 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
+        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
           'fixed bottom-0 left-0 right-0 z-[9999]',
-          'bg-white/90 dark:bg-black/90 backdrop-blur-xl border-t border-black/10 dark:border-white/20',
-          'shadow-2xl shadow-black/20',
+          'bg-[#faf9f7] dark:bg-[#141414] border-t border-stone-200 dark:border-stone-800',
           className,
         )}
       >
-        <div className="max-w-7xl mx-auto p-4 sm:p-6">
-          {!showDetails ? (
-            // Main Banner
-            <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
-              {/* Icon and Title */}
-              <div className="flex items-center gap-3 flex-shrink-0">
-                <div className="w-10 h-10 rounded-xl bg-black/20 dark:bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <Cookie className="w-5 h-5 text-black dark:text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-black dark:text-white text-lg">
-                    Cookie Preferences
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <AnimatePresence mode="wait">
+            {!showDetails ? (
+              <motion.div
+                key="banner"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="flex flex-col lg:flex-row lg:items-center gap-6"
+              >
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="font-serif text-lg text-stone-900 dark:text-stone-100 mb-2">
+                    We value your privacy
                   </h3>
-                  <p className="text-sm text-black/80 dark:text-white/80">
-                    Quebec Law 25 Compliant
+                  <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                    We use cookies to enhance your experience, analyze site
+                    traffic, and for marketing purposes. By clicking "Accept
+                    All", you consent to our use of cookies.{' '}
+                    <button
+                      onClick={() => setShowDetails(true)}
+                      className="inline-flex items-center gap-1 text-stone-900 dark:text-stone-100 hover:underline underline-offset-2"
+                    >
+                      Manage preferences
+                      <ChevronDown className="w-3 h-3" />
+                    </button>
                   </p>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="flex-1 min-w-0">
-                <p className="text-sm text-black/90 dark:text-white/90 leading-relaxed">
-                  We use cookies to enhance your browsing experience and analyze
-                  website traffic.
-                  <span className="font-medium text-black dark:text-white">
-                    {' '}
-                    Your privacy matters to us.
-                  </span>{' '}
-                  You can choose which cookies to accept or reject them all.
+                {/* Actions */}
+                <div className="flex flex-col sm:flex-row gap-3 lg:flex-shrink-0">
                   <button
-                    onClick={() => setShowDetails(true)}
-                    className="text-black dark:text-white hover:underline ml-1 font-medium"
+                    onClick={handleRejectAll}
+                    className="px-5 py-2.5 text-sm font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 border border-stone-300 dark:border-stone-700 rounded-lg transition-colors"
                   >
-                    Learn more about our cookies
+                    Reject All
                   </button>
-                </p>
-              </div>
-
-              {/* Actions */}
-              <div className="flex flex-col sm:flex-row gap-3 lg:flex-shrink-0">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowDetails(true)}
-                  className="text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 backdrop-blur-sm"
-                >
-                  <Settings className="w-4 h-4 mr-2" />
-                  Customize
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleAcceptNecessary}
-                  className="text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 backdrop-blur-sm"
-                >
-                  Necessary Only
-                </Button>
-                <Button
-                  size="sm"
-                  onClick={handleAcceptAll}
-                  className="bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 border-0"
-                >
-                  Accept All
-                </Button>
-              </div>
-            </div>
-          ) : (
-            // Detailed Settings
-            <div className="space-y-6">
-              {/* Header */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-black/10 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-black dark:text-white" />
-                  </div>
+                  <button
+                    onClick={handleAcceptAll}
+                    className="px-5 py-2.5 text-sm font-medium text-white dark:text-stone-900 bg-stone-900 dark:bg-stone-100 hover:bg-stone-800 dark:hover:bg-stone-200 rounded-lg transition-colors"
+                  >
+                    Accept All
+                  </button>
+                </div>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="details"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="space-y-6"
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-semibold text-black dark:text-white text-lg">
-                      Cookie Settings
+                    <h3 className="font-serif text-lg text-stone-900 dark:text-stone-100 mb-1">
+                      Cookie Preferences
                     </h3>
-                    <p className="text-sm text-black/70 dark:text-white/70">
-                      Choose which cookies you want to allow
-                    </p>
-                  </div>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowDetails(false)}
-                  className="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
-                >
-                  <X className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {/* Cookie Categories */}
-              <div className="grid gap-4">
-                {/* Necessary Cookies */}
-                <div className="flex items-start justify-between p-4 rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/10 backdrop-blur-sm">
-                  <div className="flex-1 pr-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h4 className="font-medium text-black dark:text-white">
-                        Necessary Cookies
-                      </h4>
-                      <span className="px-2 py-1 text-xs bg-black/20 dark:bg-white/20 text-black dark:text-white rounded-md font-medium backdrop-blur-sm">
-                        Required
-                      </span>
-                    </div>
-                    <p className="text-sm text-black/80 dark:text-white/80">
-                      Essential for the website to function properly. These
-                      cookies enable basic features like security, network
-                      management, and accessibility.
-                    </p>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-10 h-6 bg-black dark:bg-white rounded-full flex items-center justify-end px-1">
-                      <div className="w-4 h-4 bg-white dark:bg-black rounded-full shadow-sm"></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Analytics Cookies */}
-                <div className="flex items-start justify-between p-4 rounded-lg border border-black/20 dark:border-white/20 backdrop-blur-sm">
-                  <div className="flex-1 pr-4">
-                    <h4 className="font-medium text-black dark:text-white mb-2">
-                      Analytics Cookies
-                    </h4>
-                    <p className="text-sm text-black/80 dark:text-white/80 mb-2">
-                      Help us understand how visitors interact with our website
-                      by collecting and reporting information anonymously.
-                    </p>
-                    <p className="text-xs text-black/70 dark:text-white/70">
-                      Services: Google Analytics
+                    <p className="text-sm text-stone-500 dark:text-stone-400">
+                      Customize your cookie settings below
                     </p>
                   </div>
                   <button
-                    onClick={() => handleToggleSetting('analytics')}
-                    className="flex items-center"
+                    onClick={() => setShowDetails(false)}
+                    className="p-2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-300 transition-colors"
                   >
-                    <div
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {/* Cookie Categories */}
+                <div className="space-y-4">
+                  {/* Necessary */}
+                  <div className="flex items-start justify-between py-4 border-b border-stone-200 dark:border-stone-800">
+                    <div className="flex-1 pr-8">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h4 className="text-sm font-medium text-stone-900 dark:text-stone-100">
+                          Strictly Necessary
+                        </h4>
+                        <span className="text-xs text-stone-500 dark:text-stone-400">
+                          Always active
+                        </span>
+                      </div>
+                      <p className="text-sm text-stone-500 dark:text-stone-400">
+                        Essential for the website to function. These cannot be
+                        disabled.
+                      </p>
+                    </div>
+                    <div className="w-11 h-6 bg-stone-900 dark:bg-stone-100 rounded-full flex items-center justify-end px-0.5 cursor-not-allowed">
+                      <div className="w-5 h-5 bg-white dark:bg-stone-900 rounded-full shadow-sm" />
+                    </div>
+                  </div>
+
+                  {/* Analytics */}
+                  <div className="flex items-start justify-between py-4 border-b border-stone-200 dark:border-stone-800">
+                    <div className="flex-1 pr-8">
+                      <h4 className="text-sm font-medium text-stone-900 dark:text-stone-100 mb-1">
+                        Analytics & Performance
+                      </h4>
+                      <p className="text-sm text-stone-500 dark:text-stone-400">
+                        Help us understand how visitors interact with our
+                        website by collecting anonymous information.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => handleToggle('analytics')}
                       className={cn(
-                        'w-10 h-6 rounded-full flex items-center transition-colors',
+                        'w-11 h-6 rounded-full flex items-center px-0.5 transition-colors',
                         settings.analytics
-                          ? 'bg-black dark:bg-white justify-end'
-                          : 'bg-black/20 dark:bg-white/20 justify-start',
+                          ? 'bg-stone-900 dark:bg-stone-100 justify-end'
+                          : 'bg-stone-300 dark:bg-stone-700 justify-start',
                       )}
                     >
-                      <div className="w-4 h-4 bg-white dark:bg-black rounded-full shadow-sm mx-1 transition-transform"></div>
+                      <div className="w-5 h-5 bg-white dark:bg-stone-900 rounded-full shadow-sm" />
+                    </button>
+                  </div>
+
+                  {/* Marketing */}
+                  <div className="flex items-start justify-between py-4">
+                    <div className="flex-1 pr-8">
+                      <h4 className="text-sm font-medium text-stone-900 dark:text-stone-100 mb-1">
+                        Marketing & Advertising
+                      </h4>
+                      <p className="text-sm text-stone-500 dark:text-stone-400">
+                        Used to deliver personalized advertisements and measure
+                        their effectiveness.
+                      </p>
                     </div>
-                  </button>
+                    <button
+                      onClick={() => handleToggle('marketing')}
+                      className={cn(
+                        'w-11 h-6 rounded-full flex items-center px-0.5 transition-colors',
+                        settings.marketing
+                          ? 'bg-stone-900 dark:bg-stone-100 justify-end'
+                          : 'bg-stone-300 dark:bg-stone-700 justify-start',
+                      )}
+                    >
+                      <div className="w-5 h-5 bg-white dark:bg-stone-900 rounded-full shadow-sm" />
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              {/* Legal Links */}
-              <div className="flex flex-wrap gap-4 text-sm text-black/70 dark:text-white/70">
-                <a
-                  href="#"
-                  className="hover:text-black dark:hover:text-white flex items-center gap-1 transition-colors"
-                >
-                  Privacy Policy
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-black dark:hover:text-white flex items-center gap-1 transition-colors"
-                >
-                  Cookie Policy
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <span className="text-xs text-black/80 dark:text-white/80">
-                  In compliance with Quebec Law 25 and PIPEDA
-                </span>
-              </div>
+                {/* Legal Compliance Notice */}
+                <div className="pt-4 border-t border-stone-200 dark:border-stone-800">
+                  <p className="text-xs text-stone-400 dark:text-stone-500 leading-relaxed mb-4">
+                    This notice complies with GDPR (EU), CCPA (California),
+                    PIPEDA & Quebec Law 25 (Canada), and the Australian Privacy
+                    Act. You can withdraw consent at any time. For more
+                    information, see our{' '}
+                    <a
+                      href="/privacy"
+                      className="underline underline-offset-2 hover:text-stone-600 dark:hover:text-stone-300"
+                    >
+                      Privacy Policy
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      href="/cookies"
+                      className="underline underline-offset-2 hover:text-stone-600 dark:hover:text-stone-300"
+                    >
+                      Cookie Policy
+                    </a>
+                    .
+                  </p>
 
-              {/* Actions */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-2 border-t border-black/10 dark:border-white/10">
-                <Button
-                  variant="outline"
-                  onClick={handleAcceptNecessary}
-                  className="text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 backdrop-blur-sm"
-                >
-                  Accept Necessary Only
-                </Button>
-                <Button
-                  onClick={handleSaveSettings}
-                  className="bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 border-0"
-                >
-                  Save My Preferences
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={handleAcceptAll}
-                  className="text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 backdrop-blur-sm"
-                >
-                  Accept All Cookies
-                </Button>
-              </div>
-            </div>
-          )}
+                  {/* Actions */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={handleRejectAll}
+                      className="px-5 py-2.5 text-sm font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 border border-stone-300 dark:border-stone-700 rounded-lg transition-colors"
+                    >
+                      Reject All
+                    </button>
+                    <button
+                      onClick={handleSaveSettings}
+                      className="px-5 py-2.5 text-sm font-medium text-stone-900 dark:text-stone-100 border border-stone-900 dark:border-stone-100 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+                    >
+                      Save Preferences
+                    </button>
+                    <button
+                      onClick={handleAcceptAll}
+                      className="px-5 py-2.5 text-sm font-medium text-white dark:text-stone-900 bg-stone-900 dark:bg-stone-100 hover:bg-stone-800 dark:hover:bg-stone-200 rounded-lg transition-colors"
+                    >
+                      Accept All
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </motion.div>
     </AnimatePresence>
