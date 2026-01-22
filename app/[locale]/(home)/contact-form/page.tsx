@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Start Your Web Project - Axis Acquisition',
     description:
       'Get a custom quote for your premium business website. Fast delivery, AI-powered features, and professional design.',
-    images: ['https://webapplica.com/og-contact-form.jpg'],
+    images: ['https://axisacquisition.com/og-contact-form.jpg'],
     type: 'website',
   },
   twitter: {

@@ -118,7 +118,7 @@ export const Lid = ({ src }: { src?: string }) => {
         >
           <Image
             src={src as string}
-            alt="webapplica logo"
+            alt="Axis Acquisition"
             fill
             className="object-cover  rounded-lg inset-0 h-full w-full"
           />

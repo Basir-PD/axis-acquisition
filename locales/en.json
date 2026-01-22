@@ -76,12 +76,12 @@
       "email": {
         "title": "Email us",
         "description": "Send us an email and we'll get back to you within 24 hours.",
-        "address": "hello@webapplica.com"
+        "address": "info@axisacquisition.com"
       },
       "phone": {
         "title": "Call us",
         "description": "Speak with our team Monday through Friday, 9 AM to 6 PM EST.",
-        "number": "+1 (514) 775-1111"
+        "number": "+1 514 775 6790"
       }
     },
     "form": {
@@ -208,7 +208,6 @@
       "loadBalancing": "Load Balancing",
       "prioritySupport": "24/7 Priority Support",
       "sla": "SLA Guarantee",
-      "included": "What is included?",
       "show": "Show",
       "hide": "Hide",
       "showLess": "Show Less",

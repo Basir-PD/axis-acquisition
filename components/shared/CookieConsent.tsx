@@ -26,7 +26,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
 
   useEffect(() => {
     // Check if user has already made a choice
-    const consent = localStorage.getItem('webapplica-cookie-consent')
+    const consent = localStorage.getItem('axisacquisition-cookie-consent')
     if (!consent) {
       // Delay showing banner for better UX
       const timer = setTimeout(() => setIsVisible(true), 1500)
@@ -42,7 +42,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ className }) => {
     }
 
     localStorage.setItem(
-      'webapplica-cookie-consent',
+      'axisacquisition-cookie-consent',
       JSON.stringify(consentData),
     )
 

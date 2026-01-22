@@ -10,13 +10,13 @@ import { FAQs } from '@/components/faq/faqs'
 const contactMethods = [
   {
     icon: Phone,
-    value: '+1 (514) 775-1111',
-    href: 'tel:+15147751111',
+    value: '+1 514 775 6790',
+    href: 'tel:+15147756790',
   },
   {
     icon: Mail,
-    value: 'hello@webapplica.com',
-    href: 'mailto:hello@webapplica.com',
+    value: 'info@axisacquisition.com',
+    href: 'mailto:info@axisacquisition.com',
   },
 ]
 

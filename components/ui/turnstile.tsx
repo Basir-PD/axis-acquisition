@@ -62,7 +62,7 @@ export const TurnstileWrapper = forwardRef<
             theme,
             size,
             action: 'form-submit',
-            cData: 'webapplica-form',
+            cData: 'axisacquisition-form',
           }}
           style={{
             marginTop: '1rem',

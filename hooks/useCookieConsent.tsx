@@ -13,7 +13,7 @@ export interface ConsentData {
   version: string
 }
 
-const STORAGE_KEY = 'webapplica-cookie-consent'
+const STORAGE_KEY = 'axisacquisition-cookie-consent'
 const CONSENT_VERSION = '1.0'
 
 export const useCookieConsent = () => {

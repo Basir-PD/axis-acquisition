@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Axis Acquisition is a platform that provides a wide range of AI tools and services to help you stay on top of your business. Generate images, text and everything else that you need to get your business off the ground.',
   openGraph: {
-    images: ['https://ai-saas-template-webapplica.vercel.app/banner.png'],
+    images: ['https://axisacquisition.com/banner.png'],
   },
 }
 
@@ -64,7 +64,7 @@ const PackagesPage: NextPage = () => {
               <Beam showBeam={true} />
 
               <Image
-                src="/images/products/webapplica.png"
+                src="/images/products/axis-acquisition.png"
                 width="1600"
                 height="1600"
                 className=" -mb-36 aspect-[1600/1600]  rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"

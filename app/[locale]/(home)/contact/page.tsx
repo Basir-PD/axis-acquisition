@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Axis Acquisition. We'd love to hear from you.",
   openGraph: {
-    images: ['https://webapplica.com'],
+    images: ['https://axisacquisition.com'],
   },
 }
 

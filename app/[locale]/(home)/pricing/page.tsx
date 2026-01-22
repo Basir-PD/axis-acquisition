@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Axis Acquisition Pricing - Premium Web Development Packages',
     description:
       'Transparent pricing from $3,000. AI-powered features, fast delivery, lifetime support. Compare Standard, Premium & Enterprise packages.',
-    images: ['https://webapplica.com/og-pricing.jpg'],
+    images: ['https://axisacquisition.com/og-pricing.jpg'],
     type: 'website',
   },
   twitter: {

@@ -79,12 +79,12 @@
       "email": {
         "title": "Écrivez-nous",
         "description": "Envoyez-nous un courriel et nous vous répondrons sous 24 heures.",
-        "address": "hello@webapplica.com"
+        "address": "info@axisacquisition.com"
       },
       "phone": {
         "title": "Appelez-nous",
         "description": "Discutez avec notre équipe du lundi au vendredi, de 9 h à 18 h (HNE).",
-        "number": "+1 (514) 775-1111"
+        "number": "+1 514 775 6790"
       }
     },
     "form": {
@@ -211,7 +211,6 @@
       "loadBalancing": "Équilibrage de Charge",
       "prioritySupport": "Support Prioritaire 24/7",
       "sla": "Garantie SLA",
-      "included": "Ce qui est inclus :",
       "show": "Afficher",
       "hide": "Masquer",
       "showLess": "Afficher moins",

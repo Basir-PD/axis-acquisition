@@ -17,7 +17,7 @@ export function CalButton({
   variant = 'primary',
   size = 'md',
   className = '',
-  calLink = 'webapplica/30min',
+  calLink = 'axisacquisition/30min',
   showIcon = true,
 }: CalButtonProps) {
   useEffect(() => {
