@@ -1,0 +1,138 @@
+{
+  "questions": [
+    {
+      "id": "name",
+      "type": "text",
+      "question": "First, what's your name?",
+      "placeholder": "John Doe",
+      "isRequired": true
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "question": "Great! What's your email address?",
+      "placeholder": "Enter your email",
+      "isRequired": true,
+      "validation": {
+        "pattern": "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "company",
+      "type": "text",
+      "question": "What's your company or business name?",
+      "placeholder": "Acme Corp",
+      "isRequired": true
+    },
+    {
+      "id": "website_type",
+      "type": "radio",
+      "question": "What type of website do you need?",
+      "options": [
+        "Business/Corporate Website",
+        "E-commerce/Online Store",
+        "Portfolio/Personal Website",
+        "Landing Page/Marketing Site",
+        "Web Application",
+        "Blog/Content Website"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "current_website",
+      "type": "radio",
+      "question": "Do you currently have a website?",
+      "options": [
+        "No, I need a new website",
+        "Yes, but it needs a complete redesign",
+        "Yes, but it needs updates",
+        "Yes, I want to add new features"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "key_features",
+      "type": "checkbox",
+      "question": "Which features are important for your website? (Select all that apply)",
+      "options": [
+        "Contact forms",
+        "Online booking/scheduling",
+        "Payment processing",
+        "User accounts/login",
+        "Blog/News section",
+        "Product catalog",
+        "Search functionality",
+        "Multi-language support"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "design_preference",
+      "type": "radio",
+      "question": "What design style do you prefer?",
+      "options": [
+        "Modern & Minimalist",
+        "Bold & Creative",
+        "Professional & Corporate",
+        "Friendly & Approachable",
+        "Elegant & Sophisticated",
+        "I need help deciding"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "timeline",
+      "type": "radio",
+      "question": "When do you need your website completed?",
+      "options": [
+        "ASAP (within 2 weeks)",
+        "Within a month",
+        "Within 2-3 months",
+        "No rush, quality is priority"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "budget",
+      "type": "radio",
+      "question": "What's your budget for this project?",
+      "description": "This helps us recommend the best solution for you",
+      "options": [
+        "Under $1,000",
+        "$1,000 - $3,000",
+        "$3,000 - $5,000",
+        "$5,000 - $10,000",
+        "$10,000+"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "phone",
+      "type": "text",
+      "question": "What's your phone number?",
+      "description": "We'll text you when your mockup is ready",
+      "placeholder": "+1 (555) 123-4567",
+      "isRequired": true
+    },
+    {
+      "id": "additional_info",
+      "type": "textarea",
+      "question": "Any specific requirements or inspiration websites you like?",
+      "placeholder": "Tell us more about your vision...",
+      "isRequired": false,
+      "submitButton": {
+        "text": "Get My Website Mockup",
+        "alternativeText": "Submit"
+      }
+    }
+  ],
+  "metadata": {
+    "formTitle": "Website Development",
+    "formDescription": "Get a professional website that converts",
+    "successMessage": {
+      "title": "🎉 Awesome! Your website mockup is on the way!",
+      "message": "We'll create a custom design for your website within 24 hours. Check your email for updates and next steps!"
+    }
+  }
+}

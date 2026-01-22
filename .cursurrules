@@ -1,0 +1,20 @@
+# Language
+
+Remember following when writing text
+
+- we have only English and French support
+- When adding any text make sure you translate it in french and english & if you notice any existing plain english text please add translations to it.
+
+# Coding rules to remember:
+
+- Make sure to use single responsibility design pattern
+  - Always create files and mini components that does one job
+  - Likewise, functions that do one job
+- Goal for readability
+- Add comments with examples and avoid frilly languages
+- Don't created .md files unless I tell you.
+
+# Writing Copy
+
+- Write as a professional copywriter, avoid frilly language and don't sound so salesy but still influence and get the user to get the service
+- Use tips and tricks of Alex Hormozi while you can

@@ -1,0 +1,186 @@
+{
+  "questions": [
+    {
+      "id": "name",
+      "type": "text",
+      "question": "Hi there! Let's start with your name 👋",
+      "placeholder": "John Doe",
+      "isRequired": true
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "question": "Great to meet you! What's your email?",
+      "placeholder": "Enter your email",
+      "isRequired": true,
+      "validation": {
+        "pattern": "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "business_type",
+      "type": "radio",
+      "question": "What best describes your business?",
+      "options": [
+        "Startup (Just getting started)",
+        "Small Business (1-10 employees)",
+        "Growing Business (11-50 employees)",
+        "Enterprise (50+ employees)",
+        "Agency/Freelancer",
+        "Non-profit Organization"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "primary_goal",
+      "type": "radio",
+      "question": "What's your primary goal right now?",
+      "description": "We'll customize our solution to match your needs",
+      "options": [
+        "Get more customers online",
+        "Automate repetitive tasks",
+        "Build a professional website",
+        "Create a mobile app",
+        "Improve existing systems",
+        "All of the above - I need a complete solution"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "current_challenges",
+      "type": "checkbox",
+      "question": "Which challenges are you facing? (Select all that apply)",
+      "options": [
+        "No website or outdated website",
+        "Too much manual work/data entry",
+        "Missing leads from my website",
+        "Can't compete with bigger companies",
+        "Need mobile presence",
+        "Customer service is overwhelming",
+        "Marketing takes too much time"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "monthly_revenue",
+      "type": "radio",
+      "question": "What's your current monthly revenue?",
+      "description": "This helps us understand your growth stage",
+      "options": [
+        "Pre-revenue (Just starting)",
+        "$0 - $5,000",
+        "$5,000 - $25,000",
+        "$25,000 - $100,000",
+        "$100,000+"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "automation_interest",
+      "type": "radio",
+      "question": "Here's what we can automate for you. What interests you most?",
+      "options": [
+        "Lead capture & follow-up (Never miss a customer)",
+        "Customer service chatbot (24/7 support)",
+        "Appointment booking (Let customers book themselves)",
+        "Invoice & payment automation",
+        "Social media & content creation",
+        "Email marketing automation"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "website_status",
+      "type": "radio",
+      "question": "Do you currently have a website?",
+      "options": [
+        "No website yet",
+        "Yes, but it needs a complete redesign",
+        "Yes, it's okay but could be better",
+        "Yes, I'm happy with it"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "timeline",
+      "type": "radio",
+      "question": "When do you want to see results?",
+      "options": [
+        "ASAP - I'm losing money every day",
+        "Within 30 days",
+        "Within 3 months",
+        "Just exploring options"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "budget_range",
+      "type": "radio",
+      "question": "💡 Special Offer: Get a FREE professional website + AI automation setup!",
+      "description": "Choose your growth package (normally starts at $5,000)",
+      "options": [
+        "Starter: Professional website + 1 automation (Pay only $97/month hosting)",
+        "Growth: Professional website + 3 automations + mobile app ($297/month)",
+        "Scale: Complete digital transformation package ($997/month)",
+        "Enterprise: Custom solution (Let's talk)"
+      ],
+      "isRequired": true,
+      "highlight": true
+    },
+    {
+      "id": "phone",
+      "type": "text",
+      "question": "Almost done! What's your phone number?",
+      "description": "We'll text you when your website mockup is ready (usually within 24 hours)",
+      "placeholder": "+1 (555) 123-4567",
+      "isRequired": true
+    },
+    {
+      "id": "company_name",
+      "type": "text",
+      "question": "What's your company name?",
+      "placeholder": "Acme Corp",
+      "isRequired": false
+    },
+    {
+      "id": "additional_info",
+      "type": "textarea",
+      "question": "Anything specific you want us to know?",
+      "placeholder": "Tell us about your vision, specific features you need, or any questions...",
+      "isRequired": false,
+      "submitButton": {
+        "text": "Claim Your Website →",
+        "alternativeText": "Get Started"
+      }
+    }
+  ],
+  "metadata": {
+    "formTitle": "Get Your Professional Website + AI Automation",
+    "formDescription": "Transform your business in 30 days or less",
+    "successMessage": {
+      "title": "🎉 Congratulations! Your website is approved!",
+      "message": "We'll create a custom mockup of your new website within 24 hours. Plus, we'll show you exactly how our AI automation can save you 20+ hours per week. Check your email for next steps!"
+    },
+    "navigation": {
+      "previousText": "Back",
+      "nextText": "Continue →",
+      "submitText": "Claim My Website",
+      "closeText": "Close"
+    },
+    "valueProps": {
+      "headline": "Stop Losing Customers to Your Competition",
+      "subheadline": "Get a professional website + AI automation that works 24/7",
+      "benefits": [
+        "FREE professional website (normally $5,000)",
+        "AI chatbot that never sleeps",
+        "Automated lead capture & follow-up",
+        "Mobile app for your customers",
+        "30-day money-back guarantee",
+        "Setup in 7 days or less"
+      ],
+      "urgency": "Limited Time: Only 5 professional websites available this month",
+      "social_proof": "Join 500+ businesses already growing with our automation"
+    }
+  }
+}

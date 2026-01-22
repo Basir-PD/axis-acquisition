@@ -1,0 +1,713 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "packages": "Packages",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Premium Website",
+    "subtitle": "For Your Business Needs",
+    "description": "Your custom sales website, delivered in 10 days or less.",
+    "title.building": "Digital Solutions that",
+    "title.increase": "Drive More",
+    "subtitle.description": "We're a Canadian digital agency that builds AI-powered websites, voice assistants, chatbots, and automation systems — all designed to cut costs, save time, and eliminate repetitive and manual work from your business.",
+    "subtitle.startups": "start-ups",
+    "subtitle.businesses": "businesses",
+    "subtitle.aiPowered": "AI-powered",
+    "subtitle.modernTech": "cutting-edge technology",
+    "subtitle.performance": "conversions and performance",
+    "subtitle.trafficIntoSales": "traffic into sales",
+    "subtitle.growingBusiness": "scaling your business",
+    "cta": {
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "bookCall": "Book a Call",
+      "viewProjects": "View Projects",
+      "startProject": "Start Your Project"
+    },
+    "features": {
+      "included": "What's included?"
+    },
+    "trust": {
+      "noCreditCard": "No credit card required",
+      "setup": "Setup in 24 hours",
+      "moneyBack": "30-day money back guarantee"
+    },
+    "aiAutomation": {
+      "title": "AI & Automation",
+      "description": "Automate repetitive tasks and save 20+ hours per week with smart AI solutions"
+    }
+  },
+  "buttons": {
+    "discoveryCall": "Book Call",
+    "schedule": "Schedule Call",
+    "bookNow": "Book Now"
+  },
+  "cta": {
+    "readyToStart": "Ready to start your project?",
+    "getInTouch": "Get in touch today",
+    "scheduleCall": "Schedule a free consultation",
+    "getQuote": "Get a Quote",
+    "contactPromise": "Contact us and we will get back within 24 hours. We mean it.",
+    "contactUs": "Contact Us",
+    "getStarted": "Start My Project",
+    "helpText": "Not sure which option is right for you? Book a quick call to discuss your needs.",
+    "afterServices": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's work together to achieve your goals."
+    },
+    "afterProjects": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's work together to achieve your goals."
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Tell us about your project.",
+    "page": {
+      "heading": "Contact",
+      "description": "We'd love to hear from you. Get in touch and let's start something amazing together.",
+      "email": {
+        "title": "Email us",
+        "description": "Send us an email and we'll get back to you within 24 hours.",
+        "address": "hello@webapplica.com"
+      },
+      "phone": {
+        "title": "Call us",
+        "description": "Speak with our team Monday through Friday, 9 AM to 6 PM EST.",
+        "number": "+1 (514) 775-1111"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "phone": "Phone",
+      "phonePlaceholder": "Your phone number",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "quickContact": "Quick Contact",
+      "packageInterest": "Package Interest",
+      "packagePlaceholder": "Select a package"
+    },
+    "packages": {
+      "categories": {
+        "websiteDevelopment": "Website Development",
+        "aiAutomation": "AI Automation",
+        "other": "Other"
+      },
+      "options": {
+        "websiteStandard": "Standard Website",
+        "websitePremium": "Premium Website",
+        "websiteEnterprise": "Enterprise Website",
+        "aiChatbots": "AI Chatbots",
+        "aiVoiceAgents": "AI Voice Agents",
+        "aiLeadGeneration": "Lead Generation",
+        "custom": "Custom Solution",
+        "consultation": "Consultation Only"
+      }
+    },
+    "success": {
+      "title": "Message sent.",
+      "message": "Thanks for reaching out. We'll get back to you soon.",
+      "sendAnother": "Send another message"
+    },
+    "errors": {
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter email",
+      "emailInvalid": "Please enter a valid email",
+      "companyRequired": "Please enter your company's name",
+      "messageRequired": "Please enter your message",
+      "submissionFailed": "Failed to submit form. Please try again.",
+      "securityRequired": "Security verification required",
+      "securityFailed": "Security verification failed",
+      "tooManySubmissions": "Too many submissions. Please try again later.",
+      "invalidSubmission": "Invalid submission"
+    },
+    "responseTime": "We'll respond within 24 hours"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of services to help you grow your business",
+    "webDesign": {
+      "title": "Web Design & Development",
+      "description": "Custom websites built with modern technologies and best practices"
+    },
+    "ecommerce": {
+      "title": "E-Commerce Solutions",
+      "description": "Complete online stores with payment processing and inventory management"
+    },
+    "aiAutomation": {
+      "title": "AI Automation",
+      "description": "AI voice assistants, chatbots, lead generation & follow-up systems that work 24/7"
+    },
+    "marketing": {
+      "title": "Digital Marketing",
+      "description": "Comprehensive marketing strategies to grow your online presence"
+    },
+    "branding": {
+      "title": "Branding & Logo Design",
+      "description": "Professional brand identity, logo design, and visual assets that make your business stand out"
+    },
+    "support": {
+      "title": "Ongoing Support",
+      "description": "Continuous maintenance and support to keep your website running smoothly"
+    }
+  },
+  "pricing": {
+    "title": "AI Automation & Digital Solutions Pricing",
+    "subtitle": "Transparent pricing for websites, AI automation, and lead generation services",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save {percent}%",
+    "currency": "$",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "mostPopular": "Most Popular",
+    "recommended": "Recommended",
+    "getStarted": "Get Started",
+    "contactSales": "Contact Sales",
+    "features": {
+      "included": "What's included?",
+      "responsiveDesign": "Responsive Design",
+      "seoOptimized": "SEO Optimized",
+      "contactForm": "Contact Form",
+      "socialMediaIntegration": "Social Media Integration",
+      "basicAnalytics": "Basic Analytics Setup",
+      "contentUpload": "Content Upload",
+      "stockPhotos": "5 Stock Photos",
+      "ssl": "SSL Certificate",
+      "everythingInStandard": "Everything in Standard",
+      "customAnimations": "Custom Animations",
+      "advancedSeo": "Advanced SEO",
+      "blogSetup": "Blog Setup",
+      "ecommerce": "E-commerce Ready",
+      "emailMarketing": "Email Marketing Integration",
+      "advancedAnalytics": "Advanced Analytics",
+      "customGraphics": "Custom Graphics",
+      "multiLanguage": "Multi-language Support",
+      "unlimitedStockPhotos": "Unlimited Stock Photos",
+      "everythingInPremium": "Everything in Premium",
+      "customDevelopment": "Custom Development",
+      "apiIntegrations": "API Integrations",
+      "dedicatedSupport": "Dedicated Support Team",
+      "performanceOptimization": "Performance Optimization",
+      "customCms": "Custom CMS",
+      "advancedSecurity": "Advanced Security",
+      "loadBalancing": "Load Balancing",
+      "prioritySupport": "24/7 Priority Support",
+      "sla": "SLA Guarantee",
+      "included": "What is included?",
+      "show": "Show",
+      "hide": "Hide",
+      "showLess": "Show Less",
+      "showMore": "Show {count} More Features"
+    },
+    "comparePlans": "Compare All Plans",
+    "comparison": {
+      "title": "Compare Plans",
+      "subtitle": "See exactly what's included in each plan",
+      "backToPlans": "← Back to Plans",
+      "features": "Features",
+      "startProject": "Start My Project",
+      "bottomCta": "Ready to get started? Choose the plan that's right for you."
+    },
+    "showMoreFeatures": "Show 2 more features",
+    "tabs": {
+      "websites": "Website design",
+      "aiBusinessSolutions": "Business Solutions"
+    },
+    "tiers": {
+      "websites": {
+        "premium": {
+          "name": "Premium",
+          "description": "More power, more features. Ideal for growth stage companies which need more from their website.",
+          "price": "$4,500",
+          "pages": "Up to 10 pages",
+          "timeToMarket": "15 to 25 days",
+          "postLaunchSupport": "1 month",
+          "revisions": "10 revisions",
+          "cta": "Start my project",
+          "additionalFees": "Starting $50/month for hosting the service",
+          "featured": false,
+          "mainFeatures": "All Standard features|Up to 10 pages|Priority support|Conversion rate optimization|Advanced animations & interactions|AI-powered chatbots|Branding & graphic design|Professional copywriting|Newsletter signup integration|Custom Integrations (CRM, APIs, etc.)|10 revisions|1 month of post-launch support"
+        },
+        "standard": {
+          "name": "Standard",
+          "description": "Ideal for new & small businesses. A great starting point.",
+          "price": "$1,500",
+          "pages": "Up to 5 pages",
+          "timeToMarket": "6-10 days",
+          "postLaunchSupport": "2 weeks",
+          "revisions": "3 revisions",
+          "cta": "Start my project",
+          "updateWebsite": "Easily do it yourself",
+          "additionalFees": "6 months free hosting, then $20/month",
+          "featured": true,
+          "mainFeatures": "Up to 5 pages|Mobile & SEO optimization|Contact form|3 revisions|Calendar appointment integration|AI-powered chatbot|Content Management System|Logo design included|6 months free hosting, then $15/month|2 weeks of post-launch support"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "description": "Ultimate power & features. Ideal for established businesses ready for exponential growth.",
+          "price": "Custom Quote",
+          "pages": "Max 50 pages",
+          "timeToMarket": "Custom timeline",
+          "postLaunchSupport": "2 months",
+          "revisions": "Unlimited",
+          "cta": "Schedule my free consultation",
+          "additionalInfo": "Prices vary based on pages and inclusions. Contact us for a personalized quote.",
+          "featured": false,
+          "mainFeatures": "All Premium features|Up to 50 pages|E-commerce integration|UI/UX design|AI-enhanced marketing sequences|Dynamic content personalization|Custom AI agent implementation|Custom LLM fine-tuning|Unlimited revisions|2 months of post-launch support then we can discuss a monthly fee"
+        }
+      },
+      "aiAutomation": {
+        "combinedAgents": {
+          "name": "AI Employee & AI Automation",
+          "description": "Complete AI communication solution with chatbots and voice agents that capture leads, handle calls, and convert visitors 24/7",
+          "price": "$500 - $1,200",
+          "pages": "Setup & Training",
+          "timeToMarket": "3-5 business days",
+          "postLaunchSupport": "30 days support",
+          "revisions": "$0.08-$0.15/min",
+          "cta": "Start AI Agents",
+          "additionalFees": "Usage: $100-250/month minimum",
+          "mainFeatures": "24/7 call handling|Website chatbots|Lead capture & qualification|Appointment scheduling|CRM integration|Call analytics|Multi-language support|Analytics dashboard"
+        },
+        "crmAutomation": {
+          "name": "Standard Website Design",
+          "description": "Ideal for new & small businesses. A great starting point.",
+          "price": "$1,500",
+          "pages": "Up to 5 pages",
+          "timeToMarket": "2 weeks",
+          "postLaunchSupport": "2 weeks of post-launch support",
+          "revisions": "3 revisions",
+          "cta": "Get Started",
+          "additionalFees": "6 months free hosting, then $15/month",
+          "mainFeatures": "Up to 5 pages|Mobile & SEO optimization|Contact form|Calendar appointment integration|AI-powered chatbot|Content Management System|Logo design included|6 months free hosting, then $15/month|2 weeks of post-launch support"
+        },
+        "leadGeneration": {
+          "name": "Complete Business Solution",
+          "description": "Everything you need to launch and scale your business: Professional website, AI automation, CRM system, and marketing tools. Our most comprehensive package designed for serious entrepreneurs.",
+          "price": "$2,500",
+          "pages": "Complete Business Setup",
+          "timeToMarket": "10-15 business days",
+          "postLaunchSupport": "90 days optimization",
+          "revisions": "$450/month recurring",
+          "cta": "Start My Business",
+          "additionalInfo": "Perfect for entrepreneurs ready to scale. Don't see what you need? Check our other specialized packages below.",
+          "mainFeatures": "Professional website design|Custom branding & logo|AI chatbot for 24/7 support|AI voice assistant|Complete CRM system|Marketing automation|Ads & advertising setup|Lead generation tools|Email campaigns|Analytics & reporting|Monthly optimization|Ongoing support"
+        }
+      }
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small businesses",
+        "price": 999
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing businesses",
+        "price": 2499
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large organizations",
+        "price": "Custom"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to common questions about our digital solutions and AI automation services",
+    "searchPlaceholder": "Search FAQs...",
+    "categories": {
+      "general": "General",
+      "pricing": "Pricing",
+      "technical": "Technical",
+      "support": "Support"
+    },
+    "questions": {
+      "one": {
+        "question": "What do you need from me to get started?",
+        "answer": {
+          "intro": "Once you hire us, we'll start with a discovery call to understand your needs, goals, and current challenges. We'll walk you through our process, timeline, and what to expect at each milestone.",
+          "process": "During this session, we'll identify what information and resources we'll need from you to deliver the best possible solution.",
+          "itemsTitle": "We typically request:",
+          "item1": "Your business goals and success metrics",
+          "item2": "Current tools, systems, or processes you're using",
+          "item3": "Brand assets (logo, colors, style preferences)",
+          "item4": "Examples of what you like (competitors, references, inspiration)",
+          "item5": "Any existing content, data, or workflows",
+          "item6": "Technical requirements and integration needs",
+          "conclusion": "After gathering this information, we'll create a detailed project plan, finalize the agreement, and officially begin your project."
+        }
+      },
+      "two": {
+        "question": "What stack do you use?",
+        "answer": {
+          "intro": "We use different technology stacks optimized for each service:",
+          "primaryStack": {
+            "title": "Web Development"
+          },
+          "alternativeStack": {
+            "title": "AI Automation"
+          },
+          "shopify": "Business Integration Tools",
+          "summary": "We select the best tools for your specific project requirements to ensure optimal performance and scalability."
+        }
+      },
+      "three": {
+        "question": "How much do projects cost?",
+        "answer": {
+          "intro": "We price every engagement around the outcome you need. No surprise line items or hourly guesswork.",
+          "description": "Most founders kick off with our Standard Website plan at $1,500. It delivers up to 5 conversion-focused pages, mobile + SEO optimization, an AI chatbot with calendar booking, a full CMS, and six months of managed hosting with two weeks of launch support. When you need deeper automations, advanced integrations, or enterprise scale, we simply step you into our Premium and Enterprise tiers with the same transparent pricing.",
+          "cta": "Want the full breakdown? <link>See the pricing section for plan-by-plan details.</link>",
+          "averagePrice": "Starting at $1,500",
+          "priceDescription": "Standard plan: up to 5 pages, mobile & SEO optimization, AI chatbot + booking, CMS, 6 months hosting, 2-week launch support"
+        }
+      },
+      "four": {
+        "question": "What if I don't like the final result?",
+        "answer": {
+          "intro": "We have a comprehensive revision process that allows you to provide feedback on our work to ensure you love the final result. We'll keep revising until you're completely satisfied.",
+          "description": "As design and functionality preferences are subjective, it may take a few iterations to perfectly match your vision. Our commitment is to deliver work you'll love, not just complete a task.",
+          "commitmentTitle": "Our Commitment",
+          "commitment": "We'll keep working with you through revisions until you're completely satisfied with your project."
+        }
+      },
+      "five": {
+        "question": "How does payment work?",
+        "answer": {
+          "intro": "We structure our payments in three phases to align with project milestones:",
+          "phase1": {
+            "title": "50% Upfront",
+            "description": "Required before starting the project"
+          },
+          "phase2": {
+            "title": "25% Design Approval",
+            "description": "Once the designs are finalized"
+          },
+          "phase3": {
+            "title": "25% Final Payment",
+            "description": "After development is complete and you've approved the final deliverable"
+          },
+          "paymentMethods": "We accept multiple payment methods, including credit card, PayPal, and wire transfer."
+        }
+      },
+      "six": {
+        "question": "Can I get a refund?",
+        "answer": {
+          "intro": "We're unable to offer refunds as we dedicate significant time and resources to each project to ensure you receive the highest quality solution possible.",
+          "insteadTitle": "Instead, we offer:",
+          "item1": "A comprehensive revision process",
+          "item2": "Unlimited feedback rounds until you're satisfied",
+          "item3": "Collaborative approach to match your style",
+          "commitment": "As design is subjective, it may take a few versions to match your style. My commitment is to provide work you'll love, not just complete a task."
+        }
+      },
+      "seven": {
+        "question": "What if there are changes after project delivery?",
+        "answer": {
+          "intro": "We offer all clients 2 weeks of complimentary support to make any needed updates or adjustments to your solution.",
+          "includedSupport": {
+            "title": "Included Support"
+          },
+          "support1": "Content and configuration updates",
+          "support2": "Bug fixes and troubleshooting",
+          "support3": "Technical support and guidance",
+          "duration": {
+            "title": "Duration"
+          },
+          "duration1": "2 weeks complimentary",
+          "duration2": "Post-launch support",
+          "duration3": "Quick response times",
+          "note": "During this period, we'll also take care of fixing any unexpected bugs that may arise."
+        }
+      }
+    },
+    "cta": {
+      "description": "Still have questions? We're here to help.",
+      "button": "Get in Touch"
+    },
+    "stillHaveQuestions": "Still have questions?",
+    "contactSupport": "Contact our support team",
+    "noResults": "No FAQs found matching your search.",
+    "resultsFound": "{count} FAQ{count, plural, one {} other {s}} found",
+    "noResultsTitle": "No results found",
+    "noResultsMessage": "Try adjusting your search terms or browse all FAQs below.",
+    "clearSearch": "Clear search"
+  },
+  "footer": {
+    "tagline": "Empowering businesses through exceptional web experiences.",
+    "contactUs": "Contact us",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "social": "Social",
+    "copyright": "Copyright © 2024 All rights reserved",
+    "links": {
+      "home": "Home",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "refund": "Refund Policy"
+    },
+    "socialLinks": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "twitter": "Twitter"
+    }
+  },
+  "launch": {
+    "title": "Your Website is Launched!",
+    "congratulations": "Congratulations! Your new website is now {live} and ready to make an {impact}.",
+    "live": "live",
+    "impact": "impact",
+    "websiteUrl": "www.yourwebsite.com"
+  },
+  "typeform": {
+    "questions": {
+      "name": "What's your name?",
+      "email": "What's your email address?",
+      "company": "What's your company name?",
+      "website": "Do you have a company website? (Optional)",
+      "projectType": "What type of project do you need?",
+      "budget": "What's your budget range?",
+      "package": "Which package best fits your needs?",
+      "timeline": "When do you need this completed?",
+      "services": "Which services are you interested in?",
+      "details": "Tell us more about your project"
+    },
+    "options": {
+      "projectTypes": {
+        "website": "New Website",
+        "redesign": "Website Redesign",
+        "ecommerce": "E-commerce Store",
+        "webapp": "Web Application",
+        "other": "Other"
+      },
+      "budgets": {
+        "small": "Under $5,000",
+        "medium": "$5,000 - $15,000",
+        "large": "$15,000 - $50,000",
+        "enterprise": "Over $50,000"
+      },
+      "timelines": {
+        "asap": "ASAP",
+        "month": "Within a month",
+        "quarter": "Within 3 months",
+        "flexible": "Flexible"
+      }
+    },
+    "labels": {
+      "ok": "OK",
+      "close": "Close",
+      "previous": "Previous",
+      "continue": "Continue",
+      "typeAnswerHere": "Type your answer here...",
+      "pleaseSpecify": "Please specify",
+      "otherPleaseSpecify": "Other (please specify)"
+    },
+    "validation": {
+      "fieldRequired": "This field is required",
+      "specifyOption": "Please specify other option",
+      "selectAtLeastOne": "Please select at least one option",
+      "specifyAnswer": "Please specify your answer",
+      "selectOption": "Please select an option",
+      "selectPackage": "Please select a package",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "success": {
+      "title": "Thank you",
+      "message": "Your submission has been received. We'll get back to you within 24 hours with a personalized proposal.",
+      "close": "Close",
+      "submissionTitle": "🎉 Thank you for your submission!",
+      "submissionMessage": "We've received your information and our team will reach out to you soon to discuss your project requirements and how we can help bring your vision to life.",
+      "checkEmail": "Check your email for next steps!"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "submit": "Submit"
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email",
+      "submissionFailed": "Submission failed. Please try again.",
+      "securityVerification": "Please complete the security verification",
+      "requiredFields": "Please fill in all required fields"
+    },
+    "submitting": "Submitting...",
+    "pressEnter": "press",
+    "hints": {
+      "ctrlEnter": "Press Ctrl + Enter to continue"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or",
+    "and": "and",
+    "all": "All",
+    "none": "None",
+    "select": "Select",
+    "selected": "Selected",
+    "optional": "Optional",
+    "required": "Required",
+    "new": "New",
+    "comingSoon": "Coming Soon",
+    "learnMore": "Learn More",
+    "viewMore": "View More",
+    "viewLess": "View Less",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "readMore": "Read More",
+    "readLess": "Read Less"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it"
+  },
+  "projects": {
+    "title": "Our Recent Work",
+    "subtitle": "Showcasing our latest projects",
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects",
+    "projectDetails": "Project Details",
+    "technologies": "Technologies Used",
+    "visitWebsite": "Visit Website",
+    "section": {
+      "title": "Showcasing Our Product & Web Design Expertise",
+      "description": "From SaaS products and landing pages to mobile apps and design systems—we craft digital experiences that work beautifully."
+    }
+  },
+  "timeline": {
+    "badge": "Our Process",
+    "header": {
+      "mainTitle": "How We Fill Your Clinic With Patients",
+      "brand": "Brand",
+      "productService": "Marketing Solutions",
+      "userExperience": "Patient Experience",
+      "delivered": "Results Delivered",
+      "subtitle": "A proven 4-step system designed specifically for integrative health practices. We handle the marketing so you can focus on patient care."
+    },
+    "steps": {
+      "planning": {
+        "title": "Clinic Audit & Strategy",
+        "description": "We analyze your clinic's current marketing, patient demographics, and growth opportunities to create a custom acquisition strategy tailored to integrative medicine.",
+        "highlightBusiness": "your clinic's marketing",
+        "highlightStrategy": "custom acquisition strategy"
+      },
+      "branding": {
+        "title": "Website & Funnel Build",
+        "description": "We design a conversion-optimized website and patient booking funnel that positions your clinic as the premier integrative health destination in your area.",
+        "highlightSolution": "conversion-optimized website",
+        "highlightAutomation": "patient booking funnel"
+      },
+      "feedback": {
+        "title": "Launch Patient Acquisition",
+        "description": "We activate targeted ad campaigns across Google, Facebook, and Instagram to reach health-conscious patients actively seeking integrative care in your market.",
+        "highlightThoroughly": "targeted ad campaigns",
+        "highlightOptimize": "health-conscious patients"
+      },
+      "launch": {
+        "title": "Scale & Optimize",
+        "description": "We continuously optimize your campaigns, scale what works, and implement retention systems to maximize patient lifetime value and referrals.",
+        "highlightValidation": "optimize your campaigns",
+        "highlightScale": "maximize patient lifetime value"
+      }
+    }
+  },
+  "enterprise": {
+    "badge": "Health Clinic Marketing Specialists",
+    "title.process": "We handle your marketing",
+    "title.results": "so you can focus on",
+    "title.extraordinary": "healing patients.",
+    "description": "Your expertise is integrative medicine. Ours is filling your schedule with high-quality patients who value holistic care. Let's work together.",
+    "stats": {
+      "clinicsScaled": "Integrative Health Clinics Scaled",
+      "patientIncrease": "Average Patient Increase",
+      "revenueGenerated": "Revenue Generated for Clinics",
+      "avgRoi": "Avg. Marketing ROI",
+      "websitesBuilt": "Websites & Automation Systems Built",
+      "aiSystemsLaunched": "Websites, AI Agents & Automation Systems Launched",
+      "aiAccuracy": "AI Accuracy & Reliability",
+      "hoursSaved": "Hours Saved for Clients",
+      "roiFromAutomation": "ROI from AI Automations",
+      "performanceScore": "Performance Score",
+      "averageDelivery": "Average Delivery",
+      "roiIncrease": "ROI Increase"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "signup": "Sign Up",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "rememberMe": "Remember Me",
+    "loginSuccess": "Successfully logged in",
+    "loginError": "Invalid email or password",
+    "logoutSuccess": "Successfully logged out"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}",
+    "overview": "Overview",
+    "contacts": "Contacts",
+    "leads": "Leads",
+    "messages": "Messages",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "noData": "No data available",
+    "export": "Export",
+    "import": "Import"
+  },
+  "cookies": {
+    "message": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn More"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "500": {
+    "title": "Server Error",
+    "message": "Something went wrong on our end. Please try again later.",
+    "backHome": "Back to Home"
+  }
+}

@@ -1,0 +1,712 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "packages": "Forfaits",
+    "login": "Connexion",
+    "dashboard": "Tableau de bord",
+    "logout": "Déconnexion"
+  },
+  "hero": {
+    "title": "Site Web Premium",
+    "subtitle": "Pour Vos Besoins d'Affaires",
+    "description": "Votre site web de vente personnalisé, livré en 10 jours ou moins.",
+    "title.building": "Sites Web Alimentés par l'IA qui",
+    "title.increase": "Génèrent de Vrais",
+    "subtitle.description": "Nous sommes une agence numérique canadienne qui conçoit des sites web alimentés par l'IA, des assistants vocaux, des chatbots et des systèmes d'automatisation — tous conçus pour réduire les coûts, gagner du temps et éliminer le travail répétitif et manuel de votre entreprise.",
+    "subtitle.startups": "start-ups",
+    "subtitle.businesses": "entreprises",
+    "subtitle.aiPowered": "alimentés par l'IA",
+    "subtitle.modernTech": "technologies de pointe",
+    "subtitle.performance": "conversions et performances",
+    "subtitle.trafficIntoSales": "trafic en ventes",
+    "subtitle.growingBusiness": "développer votre entreprise",
+    "cta": {
+      "getStarted": "Commencer",
+      "learnMore": "En savoir plus",
+      "bookCall": "Réserver un appel",
+      "viewProjects": "Voir les projets",
+      "startProject": "Démarrer votre projet"
+    },
+    "features": {
+      "fast": "Livraison rapide",
+      "custom": "Design personnalisé",
+      "responsive": "Entièrement responsive",
+      "seo": "Optimisé SEO"
+    },
+    "trust": {
+      "noCreditCard": "Aucune carte requise",
+      "setup": "Mise en place en 24 heures",
+      "moneyBack": "Garantie de remboursement 30 jours"
+    },
+    "aiAutomation": {
+      "title": "IA & Automatisation",
+      "description": "Automatisez les tâches répétitives et économisez 20+ heures par semaine avec des solutions IA intelligentes"
+    }
+  },
+  "buttons": {
+    "discoveryCall": "Réserver",
+    "schedule": "Planifier un appel",
+    "bookNow": "Réserver maintenant"
+  },
+  "cta": {
+    "readyToStart": "Prêt à démarrer votre projet?",
+    "getInTouch": "Contactez-nous aujourd'hui",
+    "scheduleCall": "Planifier une consultation gratuite",
+    "getQuote": "Obtenir un devis",
+    "contactPromise": "Contactez-nous et nous répondrons dans les 24 heures. C'est promis.",
+    "contactUs": "Nous contacter",
+    "getStarted": "Démarrer mon projet",
+    "helpText": "Vous n'êtes pas sûr de l'option qui vous convient ? Réservez un appel rapide pour discuter de vos besoins.",
+    "afterServices": {
+      "title": "Prêt à commencer ?",
+      "subtitle": "Travaillons ensemble pour atteindre vos objectifs."
+    },
+    "afterProjects": {
+      "title": "Prêt à commencer ?",
+      "subtitle": "Travaillons ensemble pour atteindre vos objectifs."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Parlez-nous de votre projet.",
+    "page": {
+      "heading": "Contact",
+      "description": "Nous serions ravis d'avoir de vos nouvelles. Contactez-nous et lançons ensemble quelque chose d'exceptionnel.",
+      "email": {
+        "title": "Écrivez-nous",
+        "description": "Envoyez-nous un courriel et nous vous répondrons sous 24 heures.",
+        "address": "hello@webapplica.com"
+      },
+      "phone": {
+        "title": "Appelez-nous",
+        "description": "Discutez avec notre équipe du lundi au vendredi, de 9 h à 18 h (HNE).",
+        "number": "+1 (514) 775-1111"
+      }
+    },
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "company": "Entreprise",
+      "companyPlaceholder": "Votre entreprise",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "quickContact": "Contact rapide",
+      "packageInterest": "Intérêt du forfait",
+      "packagePlaceholder": "Sélectionnez un forfait"
+    },
+    "packages": {
+      "categories": {
+        "websiteDevelopment": "Développement de sites Web",
+        "aiAutomation": "Automatisation IA",
+        "other": "Autre"
+      },
+      "options": {
+        "websiteStandard": "Site Web Standard",
+        "websitePremium": "Site Web Premium",
+        "websiteEnterprise": "Site Web Entreprise",
+        "aiChatbots": "Chatbots IA",
+        "aiVoiceAgents": "Agents Vocaux IA",
+        "aiLeadGeneration": "Génération de leads",
+        "custom": "Solution personnalisée",
+        "consultation": "Consultation uniquement"
+      }
+    },
+    "success": {
+      "title": "Message envoyé.",
+      "message": "Merci de nous avoir contactés. Nous vous répondrons bientôt.",
+      "sendAnother": "Envoyer un autre message"
+    },
+    "errors": {
+      "nameRequired": "Veuillez entrer votre nom",
+      "emailRequired": "Veuillez entrer votre email",
+      "emailInvalid": "Veuillez entrer un email valide",
+      "companyRequired": "Veuillez entrer le nom de votre entreprise",
+      "messageRequired": "Veuillez entrer votre message",
+      "submissionFailed": "Échec de l'envoi. Veuillez réessayer.",
+      "securityRequired": "Vérification de sécurité requise",
+      "securityFailed": "Échec de la vérification de sécurité",
+      "tooManySubmissions": "Trop de soumissions. Veuillez réessayer plus tard.",
+      "invalidSubmission": "Soumission invalide"
+    },
+    "responseTime": "Nous répondrons dans les 24 heures"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous offrons une large gamme de services pour faire croître votre entreprise",
+    "webDesign": {
+      "title": "Conception et développement Web",
+      "description": "Sites web personnalisés construits avec des technologies modernes"
+    },
+    "ecommerce": {
+      "title": "Solutions E-Commerce",
+      "description": "Boutiques en ligne complètes avec traitement des paiements"
+    },
+    "aiAutomation": {
+      "title": "Automatisation IA",
+      "description": "Assistants vocaux IA, chatbots, génération de leads et systèmes de suivi qui fonctionnent 24/7"
+    },
+    "marketing": {
+      "title": "Marketing Digital",
+      "description": "Stratégies marketing complètes pour développer votre présence en ligne"
+    },
+    "branding": {
+      "title": "Image de Marque et Design de Logo",
+      "description": "Identité de marque professionnelle, design de logo et éléments visuels qui font ressortir votre entreprise"
+    },
+    "support": {
+      "title": "Support continu",
+      "description": "Maintenance et support continus pour garder votre site web fonctionnel"
+    }
+  },
+  "pricing": {
+    "title": "Tarifs Automatisation IA & Solutions Numériques",
+    "subtitle": "Tarification transparente pour sites web, automatisation IA et services de génération de leads",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "save": "Économisez {percent}%",
+    "currency": "$",
+    "perMonth": "/mois",
+    "perYear": "/an",
+    "mostPopular": "Le plus populaire",
+    "recommended": "Recommandé",
+    "getStarted": "Commencer",
+    "contactSales": "Contacter les ventes",
+    "features": {
+      "included": "Ce qui est inclus :",
+      "responsiveDesign": "Design Responsive",
+      "seoOptimized": "Optimisé SEO",
+      "contactForm": "Formulaire de Contact",
+      "socialMediaIntegration": "Intégration Médias Sociaux",
+      "basicAnalytics": "Configuration Analytics de Base",
+      "contentUpload": "Téléchargement de Contenu",
+      "stockPhotos": "5 Photos Stock",
+      "ssl": "Certificat SSL",
+      "everythingInStandard": "Tout du Standard",
+      "customAnimations": "Animations Personnalisées",
+      "advancedSeo": "SEO Avancé",
+      "blogSetup": "Configuration Blog",
+      "ecommerce": "Prêt E-commerce",
+      "emailMarketing": "Intégration Marketing Email",
+      "advancedAnalytics": "Analytics Avancé",
+      "customGraphics": "Graphiques Personnalisés",
+      "multiLanguage": "Support Multi-langue",
+      "unlimitedStockPhotos": "Photos Stock Illimitées",
+      "everythingInPremium": "Tout du Premium",
+      "customDevelopment": "Développement Personnalisé",
+      "apiIntegrations": "Intégrations API",
+      "dedicatedSupport": "Équipe Support Dédiée",
+      "performanceOptimization": "Optimisation Performance",
+      "customCms": "CMS Personnalisé",
+      "advancedSecurity": "Sécurité Avancée",
+      "loadBalancing": "Équilibrage de Charge",
+      "prioritySupport": "Support Prioritaire 24/7",
+      "sla": "Garantie SLA",
+      "included": "Ce qui est inclus :",
+      "show": "Afficher",
+      "hide": "Masquer",
+      "showLess": "Afficher moins",
+      "showMore": "Afficher {count} fonctionnalités supplémentaires"
+    },
+    "tabs": {
+      "websites": "Design de site web",
+      "aiBusinessSolutions": "Solutions d'Entreprise IA"
+    },
+    "tiers": {
+      "websites": {
+        "premium": {
+          "name": "Premium",
+          "description": "Plus de puissance, plus de fonctionnalités. Idéal pour les entreprises en croissance qui ont besoin de plus de leur site web.",
+          "price": "Contactez pour devis",
+          "pages": "Jusqu'à 10 pages",
+          "timeToMarket": "15 à 25 jours",
+          "postLaunchSupport": "1 mois",
+          "revisions": "10 révisions",
+          "cta": "Démarrer mon projet",
+          "additionalFees": "À partir de 50 $/mois pour l'hébergement du service",
+          "featured": false,
+          "mainFeatures": "Toutes les fonctionnalités Standard|Jusqu'à 10 pages|Support prioritaire|Optimisation du taux de conversion|Animations et interactions avancées|Chatbots alimentés par IA|Image de marque et design graphique|Rédaction professionnelle|Intégration d'inscription à la newsletter|Intégrations personnalisées (CRM, APIs, etc.)|10 révisions|1 mois de support post-lancement"
+        },
+        "standard": {
+          "name": "Standard",
+          "description": "Idéal pour les nouvelles et petites entreprises. Un excellent point de départ.",
+          "price": "Contactez pour devis",
+          "pages": "Jusqu'à 5 pages",
+          "timeToMarket": "6-10 jours",
+          "postLaunchSupport": "2 semaines",
+          "revisions": "3 révisions",
+          "cta": "Démarrer mon projet",
+          "updateWebsite": "Facilement par vous-même",
+          "additionalFees": "6 mois d'hébergement gratuit, puis 20 $/mois",
+          "featured": true,
+          "mainFeatures": "Jusqu'à 5 pages|Optimisation mobile et SEO|Formulaire de contact|3 révisions|Intégration de prise de rendez-vous|Chatbot alimenté par IA|Système de gestion de contenu|Design de logo inclus|6 mois d'hébergement gratuit, puis 15 $/mois|2 semaines de support post-lancement"
+        },
+        "enterprise": {
+          "name": "Entreprise",
+          "description": "Puissance et fonctionnalités ultimes. Idéal pour les entreprises établies prêtes pour une croissance exponentielle.",
+          "price": "Devis personnalisé",
+          "pages": "Max 50 pages",
+          "timeToMarket": "Calendrier personnalisé",
+          "postLaunchSupport": "2 mois",
+          "revisions": "Illimité",
+          "cta": "Planifier ma consultation gratuite",
+          "additionalInfo": "Les prix varient selon les pages et inclusions. Contactez-nous pour un devis personnalisé.",
+          "featured": false,
+          "mainFeatures": "Toutes les fonctionnalités Premium|Jusqu'à 50 pages|Intégration e-commerce|Design UI/UX|Séquences marketing alimentées par IA|Personnalisation de contenu dynamique|Implémentation d'agent IA personnalisé|Fine-tuning LLM personnalisé|Révisions illimitées|2 mois de support post-lancement puis nous pouvons discuter d'un tarif mensuel"
+        }
+      },
+      "aiAutomation": {
+        "combinedAgents": {
+          "name": "Chatbots IA & Agents Vocaux",
+          "description": "Solution de communication IA complète avec chatbots et agents vocaux qui capturent des leads, gèrent les appels et convertissent les visiteurs 24/7",
+          "price": "500 $ - 1 200 $",
+          "pages": "Configuration & Formation",
+          "timeToMarket": "3-5 jours ouvrables",
+          "postLaunchSupport": "30 jours support",
+          "revisions": "0,08-0,15 $/min",
+          "cta": "Démarrer Agents IA",
+          "additionalFees": "Usage : 100-250 $/mois minimum",
+          "mainFeatures": "Gestion d'appels 24/7|Chatbots de site web|Capture & qualification de leads|Planification rendez-vous|Intégration CRM|Analyses d'appels|Support multilingue|Tableau de bord analyses"
+        },
+        "crmAutomation": {
+          "name": "Design de Site Web Standard",
+          "description": "Idéal pour les nouvelles et petites entreprises. Un excellent point de départ.",
+          "price": "1 500 $",
+          "pages": "Jusqu'à 5 pages",
+          "timeToMarket": "2 semaines",
+          "postLaunchSupport": "2 semaines de support post-lancement",
+          "revisions": "3 révisions",
+          "cta": "Commencer",
+          "additionalFees": "6 mois d'hébergement gratuit, puis 15 $/mois",
+          "mainFeatures": "Jusqu'à 5 pages|Optimisation mobile et SEO|Formulaire de contact|Intégration de prise de rendez-vous|Chatbot alimenté par IA|Système de gestion de contenu|Design de logo inclus|6 mois d'hébergement gratuit, puis 15 $/mois|2 semaines de support post-lancement"
+        },
+        "leadGeneration": {
+          "name": "Solution d'Entreprise Complète",
+          "description": "Tout ce dont vous avez besoin pour lancer et développer votre entreprise : Site web professionnel, automatisation IA, système CRM et outils marketing. Notre package le plus complet conçu pour les entrepreneurs sérieux.",
+          "price": "2 500 $",
+          "pages": "Configuration Entreprise Complète",
+          "timeToMarket": "10-15 jours ouvrables",
+          "postLaunchSupport": "90 jours optimisation",
+          "revisions": "450 $/mois récurrent",
+          "cta": "Démarrer Mon Entreprise",
+          "additionalInfo": "Parfait pour les entrepreneurs prêts à se développer. Vous ne voyez pas ce dont vous avez besoin ? Consultez nos autres packages spécialisés ci-dessous.",
+          "mainFeatures": "Design de site web professionnel|Image de marque personnalisée & logo|Chatbot IA pour support 24/7|Assistant vocal IA|Système CRM complet|Automatisation marketing|Configuration publicités|Outils génération leads|Campagnes email|Analyses & rapports|Optimisation mensuelle|Support continu"
+        }
+      }
+    },
+    "plans": {
+      "starter": {
+        "name": "Débutant",
+        "description": "Parfait pour les petites entreprises",
+        "price": 999
+      },
+      "professional": {
+        "name": "Professionnel",
+        "description": "Pour les entreprises en croissance",
+        "price": 2499
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "description": "Pour les grandes organisations",
+        "price": "Sur mesure"
+      }
+    },
+    "comparePlans": "Comparer tous les forfaits",
+    "comparison": {
+      "title": "Comparer les forfaits",
+      "subtitle": "Découvrez exactement ce qui est inclus dans chaque forfait",
+      "backToPlans": "← Retour aux forfaits",
+      "features": "Caractéristiques",
+      "startProject": "Démarrer mon projet",
+      "bottomCta": "Prêt à vous lancer ? Choisissez le forfait qui vous convient."
+    },
+    "showMoreFeatures": "Afficher 2 fonctionnalités supplémentaires"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "subtitle": "Obtenez des réponses aux questions courantes sur nos solutions numériques et services d'automatisation IA",
+    "searchPlaceholder": "Rechercher FAQ...",
+    "categories": {
+      "general": "Général",
+      "pricing": "Tarification",
+      "technical": "Technique",
+      "support": "Support"
+    },
+    "questions": {
+      "one": {
+        "question": "De quoi avez-vous besoin de moi pour commencer ?",
+        "answer": {
+          "intro": "Une fois que vous nous embauchez, nous commencerons par un appel découverte pour comprendre vos besoins, objectifs et défis actuels. Nous vous expliquerons notre processus, calendrier et ce à quoi vous attendre à chaque étape.",
+          "process": "Pendant cette session, nous identifierons quelles informations et ressources nous aurons besoin de votre part pour livrer la meilleure solution possible.",
+          "itemsTitle": "Nous demandons généralement :",
+          "item1": "Vos objectifs commerciaux et métriques de succès",
+          "item2": "Outils, systèmes ou processus actuels que vous utilisez",
+          "item3": "Éléments de marque (logo, couleurs, préférences de style)",
+          "item4": "Exemples de ce que vous aimez (concurrents, références, inspiration)",
+          "item5": "Tout contenu, données ou workflows existants",
+          "item6": "Exigences techniques et besoins d'intégration",
+          "conclusion": "Après avoir recueilli ces informations, nous créerons un plan de projet détaillé, finaliserons l'accord, et commencerons officiellement votre projet."
+        }
+      },
+      "two": {
+        "question": "Quelle stack utilisez-vous ?",
+        "answer": {
+          "intro": "Nous utilisons différentes piles technologiques optimisées pour chaque service :",
+          "primaryStack": {
+            "title": "Développement Web"
+          },
+          "alternativeStack": {
+            "title": "Automatisation IA"
+          },
+          "shopify": "Outils d'Intégration Business",
+          "summary": "Nous sélectionnons les meilleurs outils pour vos exigences de projet spécifiques afin d'assurer une performance et une évolutivité optimales."
+        }
+      },
+      "three": {
+        "question": "Combien coûtent les projets ?",
+        "answer": {
+          "intro": "Nous fixons chaque mission en fonction du résultat attendu. Jamais sur des lignes surprises ou des estimations horaires.",
+          "description": "La plupart des fondateurs démarrent avec notre forfait Site Web Standard à 1 500 $. Il comprend jusqu'à 5 pages orientées conversion, une optimisation mobile + SEO, un chatbot IA avec prise de rendez-vous, un CMS complet ainsi que six mois d'hébergement géré et deux semaines d'accompagnement post-lancement. Besoin d'automatisations avancées, d'intégrations ou d'une échelle entreprise ? Nous vous faisons évoluer vers nos formules Premium et Entreprise avec la même transparence tarifaire.",
+          "cta": "Envie d'un aperçu complet ? <link>Consultez la section Tarifs pour découvrir chaque forfait en détail.</link>",
+          "averagePrice": "À partir de 1 500 $",
+          "priceDescription": "Forfait Standard : jusqu'à 5 pages, optimisation mobile et SEO, chatbot IA + prise de rendez-vous, CMS, 6 mois d'hébergement, 2 semaines de support de lancement"
+        }
+      },
+      "four": {
+        "question": "Et si je n'aime pas le résultat final ?",
+        "answer": {
+          "intro": "Nous avons un processus de révision complet qui vous permet de fournir des commentaires sur notre travail pour vous assurer que vous adorez le résultat final. Nous continuerons à réviser jusqu'à ce que vous soyez complètement satisfait.",
+          "description": "Comme les préférences de design et de fonctionnalité sont subjectives, il peut falloir quelques itérations pour parfaitement correspondre à votre vision. Notre engagement est de livrer un travail que vous aimerez, pas seulement compléter une tâche.",
+          "commitmentTitle": "Notre Engagement",
+          "commitment": "Nous continuerons à travailler avec vous à travers les révisions jusqu'à ce que vous soyez complètement satisfait de votre projet."
+        }
+      },
+      "five": {
+        "question": "Comment fonctionne le paiement ?",
+        "answer": {
+          "intro": "Nous structurons nos paiements en trois phases pour s'aligner avec les jalons du projet :",
+          "phase1": {
+            "title": "50% d'avance",
+            "description": "Requis avant de commencer le projet"
+          },
+          "phase2": {
+            "title": "25% Approbation du design",
+            "description": "Une fois les designs finalisés"
+          },
+          "phase3": {
+            "title": "25% Paiement final",
+            "description": "Après que le développement soit terminé et que vous ayez approuvé le site"
+          },
+          "paymentMethods": "Nous acceptons plusieurs méthodes de paiement, incluant carte de crédit, PayPal et virement bancaire."
+        }
+      },
+      "six": {
+        "question": "Puis-je obtenir un remboursement ?",
+        "answer": {
+          "intro": "Nous ne pouvons pas offrir de remboursements car nous dédions un temps et des ressources significatifs à chaque projet pour nous assurer que vous receviez le site web de la plus haute qualité possible.",
+          "insteadTitle": "Au lieu de cela, nous offrons :",
+          "item1": "Un processus de révision complet",
+          "item2": "Tours de commentaires illimités jusqu'à ce que vous soyez satisfait",
+          "item3": "Approche collaborative pour correspondre à votre style",
+          "commitment": "Comme le design est subjectif, il peut prendre quelques versions pour correspondre à votre style. Mon engagement est de fournir un travail que vous aimerez, pas seulement compléter une tâche."
+        }
+      },
+      "seven": {
+        "question": "Et s'il y a des changements après la livraison du projet ?",
+        "answer": {
+          "intro": "Nous offrons à tous les clients 2 semaines de support gratuit pour effectuer toutes les mises à jour ou ajustements nécessaires à votre solution.",
+          "includedSupport": {
+            "title": "Support Inclus"
+          },
+          "support1": "Mises à jour de contenu et configuration",
+          "support2": "Corrections de bugs et dépannage",
+          "support3": "Support technique et orientation",
+          "duration": {
+            "title": "Durée"
+          },
+          "duration1": "2 semaines gratuites",
+          "duration2": "Support post-lancement",
+          "duration3": "Temps de réponse rapides",
+          "note": "Pendant cette période, nous nous occuperons aussi de corriger tout bug inattendu qui pourrait survenir."
+        }
+      }
+    },
+    "cta": {
+      "description": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+      "button": "Nous contacter"
+    },
+    "stillHaveQuestions": "Vous avez encore des questions?",
+    "contactSupport": "Contactez notre équipe de support",
+    "noResults": "Aucune FAQ trouvée correspondant à votre recherche.",
+    "resultsFound": "{count} FAQ{count, plural, one {} other {s}} trouvée{count, plural, one {} other {s}}",
+    "noResultsTitle": "Aucun résultat trouvé",
+    "noResultsMessage": "Essayez d'ajuster vos termes de recherche ou parcourez toutes les FAQ ci-dessous.",
+    "clearSearch": "Effacer la recherche"
+  },
+  "footer": {
+    "tagline": "Responsabiliser les entreprises grâce à des expériences web exceptionnelles.",
+    "contactUs": "Nous contacter",
+    "navigation": "Navigation",
+    "legal": "Légal",
+    "social": "Social",
+    "copyright": "Copyright © 2024 Tous droits réservés",
+    "links": {
+      "home": "Accueil",
+      "pricing": "Tarifs",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "refund": "Politique de remboursement"
+    },
+    "socialLinks": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "twitter": "Twitter"
+    }
+  },
+  "launch": {
+    "title": "Votre site web est lancé !",
+    "congratulations": "Félicitations ! Votre nouveau site web est maintenant {live} et prêt à faire {impact}.",
+    "live": "en ligne",
+    "impact": "impact",
+    "websiteUrl": "www.votre-siteweb.com"
+  },
+  "typeform": {
+    "questions": {
+      "name": "Quel est votre nom?",
+      "email": "Quelle est votre adresse email?",
+      "company": "Quel est le nom de votre entreprise?",
+      "website": "Avez-vous un site web d'entreprise? (Optionnel)",
+      "projectType": "De quel type de projet avez-vous besoin?",
+      "budget": "Quelle est votre fourchette budgétaire?",
+      "package": "Quel forfait correspond le mieux à vos besoins?",
+      "timeline": "Quand avez-vous besoin que ce soit terminé?",
+      "services": "Quels services vous intéressent?",
+      "details": "Parlez-nous plus de votre projet"
+    },
+    "options": {
+      "projectTypes": {
+        "website": "Nouveau site web",
+        "redesign": "Refonte de site web",
+        "ecommerce": "Boutique en ligne",
+        "webapp": "Application web",
+        "other": "Autre"
+      },
+      "budgets": {
+        "small": "Moins de 5 000 $",
+        "medium": "5 000 $ - 15 000 $",
+        "large": "15 000 $ - 50 000 $",
+        "enterprise": "Plus de 50 000 $"
+      },
+      "timelines": {
+        "asap": "Dès que possible",
+        "month": "Dans un mois",
+        "quarter": "Dans 3 mois",
+        "flexible": "Flexible"
+      }
+    },
+    "labels": {
+      "ok": "OK",
+      "close": "Fermer",
+      "previous": "Précédent",
+      "continue": "Continuer",
+      "typeAnswerHere": "Tapez votre réponse ici...",
+      "pleaseSpecify": "Veuillez préciser",
+      "otherPleaseSpecify": "Autre (veuillez préciser)"
+    },
+    "validation": {
+      "fieldRequired": "Ce champ est requis",
+      "specifyOption": "Veuillez préciser l'autre option",
+      "selectAtLeastOne": "Veuillez sélectionner au moins une option",
+      "specifyAnswer": "Veuillez préciser votre réponse",
+      "selectOption": "Veuillez sélectionner une option",
+      "selectPackage": "Veuillez sélectionner un forfait",
+      "invalidEmail": "Veuillez entrer une adresse email valide"
+    },
+    "success": {
+      "title": "Merci",
+      "message": "Votre soumission a été reçue. Nous vous répondrons dans les 24 heures avec une proposition personnalisée.",
+      "close": "Fermer",
+      "submissionTitle": "🎉 Merci pour votre soumission !",
+      "submissionMessage": "Nous avons reçu vos informations et notre équipe vous contactera bientôt pour discuter de vos exigences de projet et comment nous pouvons vous aider à donner vie à votre vision.",
+      "checkEmail": "Vérifiez votre email pour les prochaines étapes !"
+    },
+    "navigation": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "submit": "Soumettre"
+    },
+    "errors": {
+      "required": "Ce champ est requis",
+      "invalidEmail": "Veuillez entrer un email valide",
+      "submissionFailed": "Échec de la soumission. Veuillez réessayer.",
+      "securityVerification": "Veuillez compléter la vérification de sécurité",
+      "requiredFields": "Veuillez remplir tous les champs requis"
+    },
+    "submitting": "Envoi en cours...",
+    "pressEnter": "appuyez",
+    "hints": {
+      "ctrlEnter": "Appuyez sur Ctrl + Entrée pour continuer"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Quelque chose s'est mal passé",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "yes": "Oui",
+    "no": "Non",
+    "or": "ou",
+    "and": "et",
+    "all": "Tout",
+    "none": "Aucun",
+    "select": "Sélectionner",
+    "selected": "Sélectionné",
+    "optional": "Optionnel",
+    "required": "Requis",
+    "new": "Nouveau",
+    "comingSoon": "Bientôt disponible",
+    "learnMore": "En savoir plus",
+    "viewMore": "Voir plus",
+    "viewLess": "Voir moins",
+    "showMore": "Afficher plus",
+    "showLess": "Afficher moins",
+    "readMore": "Lire plus",
+    "readLess": "Lire moins"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Ne nous croyez pas sur parole"
+  },
+  "projects": {
+    "title": "Nos travaux récents",
+    "subtitle": "Présentation de nos derniers projets",
+    "viewProject": "Voir le projet",
+    "viewAllProjects": "Voir tous les projets",
+    "projectDetails": "Détails du projet",
+    "technologies": "Technologies utilisées",
+    "visitWebsite": "Visiter le site web",
+    "section": {
+      "title": "Présentation de Notre Expertise en Design Produit & Web",
+      "description": "Des produits SaaS et pages d'atterrissage aux applications mobiles et systèmes de design—nous créons des expériences numériques qui fonctionnent parfaitement."
+    }
+  },
+  "timeline": {
+    "badge": "Processus",
+    "header": {
+      "mainTitle": "Voici votre plan étape par étape:",
+      "brand": "Marque",
+      "productService": "Sites Web + Automatisation",
+      "userExperience": "Expérience Utilisateur",
+      "delivered": "Livré",
+      "subtitle": "Pas besoin de réinventer la roue - suivez simplement les étapes et regardez votre entreprise se développer avec les bonnes solutions numériques."
+    },
+    "steps": {
+      "planning": {
+        "title": "Découverte & Stratégie",
+        "description": "Nous analysons vos processus métier et élaborons une stratégie numérique sur mesure adaptée à vos besoins spécifiques.",
+        "highlightBusiness": "vos processus métier",
+        "highlightStrategy": "une stratégie numérique sur mesure"
+      },
+      "branding": {
+        "title": "Construction & Intégration",
+        "description": "Nous développons votre solution personnalisée et intégrons des automatisations IA qui fonctionnent en parfaite harmonie.",
+        "highlightSolution": "solution personnalisée",
+        "highlightAutomation": "automatisations IA"
+      },
+      "feedback": {
+        "title": "Tests & Optimisation",
+        "description": "Vous testez l'ensemble minutieusement et nous optimisons et affinons selon vos retours.",
+        "highlightThoroughly": "minutieusement",
+        "highlightOptimize": "optimiser et affiner"
+      },
+      "launch": {
+        "title": "Déploiement & Croissance",
+        "description": "Après la validation finale, nous déployons votre solution et vous aidons à évoluer au rythme de la croissance de votre entreprise.",
+        "highlightValidation": "validation finale",
+        "highlightScale": "vous aider à évoluer"
+      }
+    }
+  },
+  "enterprise": {
+    "badge": "Solutions d'entreprise",
+    "title.process": "Nous gardons le processus",
+    "title.results": "fluide et les résultats",
+    "title.extraordinary": "extraordinaires.",
+    "description": "Nous écoutons ce dont vous avez besoin. Nous le construisons mieux que vous l'aviez imaginé. Nous livrons rapidement et dépassons les attentes.",
+    "stats": {
+      "websitesBuilt": "Sites Web et Systèmes d'Automatisation Créés",
+      "aiSystemsLaunched": "Sites Web, Agents IA et Systèmes d'Automatisation Lancés",
+      "aiAccuracy": "Précision et Fiabilité de l'IA",
+      "hoursSaved": "Heures Économisées pour les Clients",
+      "roiFromAutomation": "ROI des Automatisations IA",
+      "performanceScore": "Score de Performance",
+      "averageDelivery": "Livraison Moyenne",
+      "roiIncrease": "Augmentation ROI"
+    }
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "signup": "S'inscrire",
+    "forgotPassword": "Mot de passe oublié?",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "rememberMe": "Se souvenir de moi",
+    "loginSuccess": "Connexion réussie",
+    "loginError": "Email ou mot de passe invalide",
+    "logoutSuccess": "Déconnexion réussie"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bon retour, {name}",
+    "overview": "Aperçu",
+    "contacts": "Contacts",
+    "leads": "Prospects",
+    "messages": "Messages",
+    "analytics": "Analytique",
+    "settings": "Paramètres",
+    "noData": "Aucune donnée disponible",
+    "export": "Exporter",
+    "import": "Importer"
+  },
+  "cookies": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience. En continuant à visiter ce site, vous acceptez notre utilisation des cookies.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "learnMore": "En savoir plus"
+  },
+  "404": {
+    "title": "Page non trouvée",
+    "message": "La page que vous recherchez n'existe pas.",
+    "backHome": "Retour à l'accueil"
+  },
+  "500": {
+    "title": "Erreur du serveur",
+    "message": "Quelque chose s'est mal passé de notre côté. Veuillez réessayer plus tard.",
+    "backHome": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,10 @@
+export { default as StatsCards } from './StatsCards'
+export { default as ClientsTable } from './ClientsTable'
+export { default as ProjectsTable } from './ProjectsTable'
+export { default as ProjectsKanban } from './ProjectsKanban'
+export { default as ActivityFeed } from './ActivityFeed'
+
+export type { Client } from './ClientsTable'
+export type { ProjectWithClient } from './ProjectsTable'
+export type { ProjectWithClient as KanbanProject } from './ProjectsKanban'
+export type { Activity } from './ActivityFeed'

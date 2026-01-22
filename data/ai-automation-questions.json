@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "id": "company_name",
+      "type": "text",
+      "question": "What's your company name?",
+      "placeholder": "Acme Corp",
+      "isRequired": true
+    },
+    {
+      "id": "website",
+      "type": "text",
+      "question": "Do you have a company website? (Optional)",
+      "placeholder": "doneforyou.com",
+      "isRequired": false,
+      "validation": {
+        "pattern": "^(?!https?://).*$",
+        "message": "Please enter just the domain (e.g., example.com)"
+      }
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "question": "Please Enter your email.",
+      "placeholder": "info@doneforyou.com",
+      "isRequired": true,
+      "validation": {
+        "pattern": "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "employees",
+      "type": "radio",
+      "question": "How many employees are in your organization?*",
+      "options": [
+        "1 - 5",
+        "6 - 15",
+        "16 - 50",
+        "50 - 150",
+        "150 - 400",
+        "400+"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "timeline",
+      "type": "radio",
+      "question": "How soon is your organization planning to implement AI or automation?*",
+      "description": "This will help us understand your organisation better.",
+      "options": [
+        "Immediately (within the next 3 months)",
+        "In the next 6 months",
+        "Within the year",
+        "Just exploring"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "ai_services",
+      "type": "checkbox",
+      "question": "Which AI & automation solutions are you interested in? (Select all that apply)*",
+      "description": "Choose the services that would benefit your business most",
+      "options": [
+        "AI Voice Assistant (Answer calls 24/7)",
+        "Live Chat Bot (Customer support automation)",
+        "Lead Generation AI (Capture & qualify leads)",
+        "Appointment Booking Bot (Schedule meetings automatically)",
+        "Email Automation (Smart email responses & campaigns)",
+        "Social Media AI (Content creation & posting)",
+        "Document Processing (Invoice, contract automation)",
+        "Data Entry Automation (Eliminate manual work)",
+        "Sales Assistant AI (Follow-ups & CRM updates)",
+        "Internal AI Assistant (Employee productivity tools)",
+        "Custom AI Solution (Something specific to your business)"
+      ],
+      "isRequired": true
+    },
+    {
+      "id": "automation_focus",
+      "type": "text",
+      "question": "If you could automate one thing in your business today, what would it be?*",
+      "placeholder": "Lead generation",
+      "isRequired": true
+    },
+    {
+      "id": "additional_info",
+      "type": "textarea",
+      "question": "Is there anything else you would like to add?",
+      "placeholder": "Nope",
+      "isRequired": false,
+      "submitButton": {
+        "text": "Submit",
+        "alternativeText": "OK"
+      }
+    }
+  ],
+  "metadata": {
+    "formTitle": "AI Automation Assessment",
+    "formDescription": "Help us understand your automation needs",
+    "successMessage": {
+      "title": "Thank you!",
+      "message": "Your submission has been received. We'll analyze your automation needs and get back to you within 24 hours with a personalized AI strategy."
+    },
+    "navigation": {
+      "previousText": "Previous",
+      "nextText": "OK",
+      "submitText": "Submit",
+      "closeText": "Close"
+    }
+  }
+}
