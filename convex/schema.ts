@@ -6,7 +6,6 @@ export default defineSchema({
     name: v.string(),
     email: v.string(),
     phoneNumber: v.optional(v.string()),
-    package: v.optional(v.string()),
     message: v.string(),
     status: v.optional(v.string()), // "new", "contacted", "converted", "archived"
     source: v.optional(v.string()), // "contact-page", "popup", "hero"

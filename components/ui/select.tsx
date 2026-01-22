@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import type React from 'react'
 import { createContext, useContext, useEffect, useRef } from 'react'
+import { cn } from '@/lib/utils'
 
 interface SelectContextProps {
   value: string
@@ -155,7 +156,11 @@ export const SelectContent: React.FC<SelectContentProps> = ({
       {open && (
         <motion.div
           ref={contentRef}
-          className={`absolute mt-2 w-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl backdrop-blur-sm z-50 overflow-hidden ${className}`}
+          className={cn(
+            'absolute mt-2 w-full border rounded-2xl shadow-xl z-50 overflow-hidden',
+            'border-gray-200 dark:border-gray-700',
+            className,
+          )}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -197,7 +202,11 @@ export const SelectItem: React.FC<SelectItemProps> = ({
   return (
     <div
       role="option"
-      className={`cursor-pointer px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150 border-l-2 border-transparent hover:border-primary/30 ${className}`}
+      className={cn(
+        'cursor-pointer px-4 py-3 text-left transition-colors duration-150',
+        'text-gray-700 dark:text-gray-200',
+        className,
+      )}
       onClick={handleClick}
     >
       {children}

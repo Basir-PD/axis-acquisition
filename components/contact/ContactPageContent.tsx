@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { ContactForm } from './contact'
@@ -23,63 +22,33 @@ export default function ContactPageContent() {
       <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <header className="pt-32 md:pt-40 pb-16 md:pb-24">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl"
-          >
+          <div className="max-w-2xl">
             {/* Eyebrow */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xs tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 mb-6"
-            >
+            <p className="text-xs tracking-[0.3em] uppercase text-stone-400 dark:text-stone-500 mb-6">
               Get in touch
-            </motion.p>
+            </p>
 
             {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-stone-900 dark:text-stone-100 leading-[1.1] tracking-[-0.02em] mb-8"
-            >
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-stone-900 dark:text-stone-100 leading-[1.1] tracking-[-0.02em] mb-8">
               Let's start a
               <br />
               conversation.
-            </motion.h1>
+            </h1>
 
             {/* Subtle divider */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="w-16 h-px bg-stone-300 dark:bg-stone-700 origin-left mb-8"
-            />
+            <div className="w-16 h-px bg-stone-300 dark:bg-stone-700 mb-8" />
 
             {/* Subtext */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-base text-stone-500 dark:text-stone-400 leading-relaxed max-w-md"
-            >
+            <p className="text-base text-stone-500 dark:text-stone-400 leading-relaxed max-w-md">
               Share your vision with us. We respond within 24 hours.
-            </motion.p>
-          </motion.div>
+            </p>
+          </div>
         </header>
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-5 gap-16 lg:gap-24 pb-24 md:pb-32">
           {/* Contact Info - Left Column */}
-          <motion.aside
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="lg:col-span-2 space-y-12"
-          >
+          <aside className="lg:col-span-2 space-y-12">
             {/* Direct Contact */}
             <div>
               <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 dark:text-stone-500 mb-6">
@@ -130,17 +99,12 @@ export default function ContactPageContent() {
                 </span>
               </p>
             </div>
-          </motion.aside>
+          </aside>
 
           {/* Contact Form - Right Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="lg:col-span-3"
-          >
+          <div className="lg:col-span-3">
             <ContactForm />
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

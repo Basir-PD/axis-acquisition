@@ -8,7 +8,6 @@ interface ContactFormData {
   name: string
   email: string
   phoneNumber?: string
-  package?: string
   message: string
   source?: string
 }
@@ -40,7 +39,6 @@ export function useConvexContactForm({
           name: data.name,
           email: data.email,
           phoneNumber: data.phoneNumber,
-          package: data.package,
           message: data.message,
           source,
         })

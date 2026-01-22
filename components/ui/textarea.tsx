@@ -5,11 +5,13 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 
 export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  variant?: 'default' | 'minimal'
+}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
-    const radius = 100 // change this to increase the radius of the hover effect
+  ({ className, variant = 'default', ...props }, ref) => {
+    const radius = 100
     const [visible, setVisible] = React.useState(false)
 
     const mouseX = useMotionValue(0)
@@ -21,11 +23,32 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       clientY,
     }: React.MouseEvent) {
       const { left, top } = currentTarget.getBoundingClientRect()
-
       mouseX.set(clientX - left)
       mouseY.set(clientY - top)
     }
 
+    // Minimal variant - simple textarea without wrapper effects
+    if (variant === 'minimal') {
+      return (
+        <textarea
+          className={cn(
+            'flex w-full bg-transparent text-neutral-900 dark:text-neutral-100',
+            'border-0 border-b border-stone-200 dark:border-stone-800 rounded-none px-0 py-3 text-sm',
+            'placeholder:text-neutral-400 dark:placeholder:text-neutral-500',
+            'focus-visible:outline-none focus-visible:ring-0',
+            'focus:border-stone-900 dark:focus:border-stone-100',
+            'disabled:cursor-not-allowed disabled:opacity-50',
+            'min-h-[120px] resize-none',
+            'transition-colors duration-200',
+            className,
+          )}
+          ref={ref}
+          {...props}
+        />
+      )
+    }
+
+    // Default variant - with gradient hover effect
     return (
       <motion.div
         style={{
@@ -45,7 +68,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           className={cn(
             `flex w-full border-none bg-gray-50 dark:bg-zinc-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-sm
-            placeholder:text-neutral-400 dark:placeholder-text-neutral-600 
+            placeholder:text-neutral-400 dark:placeholder-text-neutral-600
             focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
             disabled:cursor-not-allowed disabled:opacity-50
             dark:shadow-[0px_0px_1px_1px_var(--neutral-700)]
