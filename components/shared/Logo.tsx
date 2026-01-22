@@ -1,15 +1,36 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-export const Logo = () => {
+interface LogoProps {
+  variant?: 'full' | 'icon'
+  className?: string
+}
+
+export const Logo = ({ variant = 'full', className }: LogoProps) => {
   return (
     <Link
       href="/"
-      className="font-normal flex space-x-2 items-center text-sm mr-4  text-black px-2 py-1  relative z-20"
+      className={`flex items-center relative z-20 ${className || ''}`}
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm" />
-      <span className="font-medium text-black dark:text-white">
-        Axis Acquisition
-      </span>
+      {variant === 'full' ? (
+        <Image
+          src="/images/logo.svg"
+          alt="Axis Acquisition"
+          width={160}
+          height={48}
+          className="dark:brightness-110"
+          priority
+        />
+      ) : (
+        <Image
+          src="/images/logo-icon.svg"
+          alt="Axis Acquisition"
+          width={40}
+          height={40}
+          className="dark:brightness-110"
+          priority
+        />
+      )}
     </Link>
   )
 }

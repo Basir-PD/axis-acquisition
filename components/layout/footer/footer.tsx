@@ -6,12 +6,12 @@ import {
   Facebook,
   Heart,
   Instagram,
-  Leaf,
   Linkedin,
   Mail,
   Phone,
   Youtube,
 } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -91,18 +91,14 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-sage-600">
-                <Leaf className="w-7 h-7 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl font-bold text-white leading-none">
-                  Axis
-                </span>
-                <span className="text-xs text-sage-400 tracking-wider uppercase">
-                  Patient Acquisition
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-6">
+              <Image
+                src="/images/logo.svg"
+                alt="Axis Acquisition"
+                width={180}
+                height={54}
+                className="brightness-0 invert"
+              />
             </Link>
 
             <p className="text-sage-300 leading-relaxed mb-6 max-w-sm">
