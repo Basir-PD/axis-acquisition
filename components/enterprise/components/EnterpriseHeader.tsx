@@ -35,7 +35,7 @@ export function EnterpriseHeader() {
         </span>
       </h2>
 
-      <p className="text-xl md:text-2xl text-stone-600 dark:text-stone-400 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-lg sm:text-xl md:text-2xl text-stone-600 dark:text-stone-400 max-w-4xl mx-auto leading-relaxed px-4">
         <FormattedMessage
           id="enterprise.description"
           defaultMessage="Your expertise is integrative medicine. Ours is filling your schedule with high-quality patients who value holistic care. Let's work together."

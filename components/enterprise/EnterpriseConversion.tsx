@@ -61,7 +61,7 @@ export default function EnterpriseConversion() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-32 bg-cream-50 dark:bg-[#0c0f0c] overflow-hidden"
+      className="relative py-20 md:py-32 bg-cream-50 dark:bg-[#0c0f0c] overflow-x-clip"
     >
       <BackgroundEffects />
 
